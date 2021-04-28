@@ -1,0 +1,141 @@
+<!--<template>-->
+<!--  <v-container fluid grid-list-md justify-center v-if="!model.isProduction">-->
+<!--    <v-layout justify-center row wrap>-->
+<!--      <v-flex xs12>-->
+<!--        <v-text-field box label="GCM Device Registration Id"-->
+<!--                      placeholder="Enter device registration id"-->
+<!--                      ref="textFieldRegistrationId" v-model="model.rcherz.gcmRegistrationId"/>-->
+<!--      </v-flex>-->
+<!--      <v-flex xs12>-->
+<!--        <v-text-field box label="FCM Device Registration Id"-->
+<!--                      placeholder="Enter device registration id"-->
+<!--                      ref="textFieldRegistrationId" v-model="model.rcherz.fcmRegistrationId"/>-->
+<!--      </v-flex>-->
+<!--      <v-flex>-->
+<!--        <v-switch-->
+<!--          color="accent"-->
+<!--          label="FCM or GCM"-->
+<!--          v-model="model.rcherz.isGCMEnabled"-->
+<!--        />-->
+<!--      </v-flex>-->
+<!--    </v-layout>-->
+<!--    <v-layout justify-center row wrap>-->
+<!--      <v-flex md3 sm5 xs6>-->
+<!--        <v-text-field box label="Push message id to count from"-->
+<!--                      placeholder="push message id"-->
+<!--                      ref="textFieldPushMessageId" v-model="model.rcherz.pushMessageId"/>-->
+<!--      </v-flex>-->
+<!--    </v-layout>-->
+<!--    <v-layout justify-center row wrap>-->
+<!--      <v-flex shrink>-->
+<!--        <CSTextButton @click="sendLoadUsers()" color="secondary" mask="aaaaaaaa" placeholder="code"-->
+<!--                      ref="buttonLoadUsers"-->
+<!--                      text="isebmopz" title="Load Users"/>-->
+<!--        <CSLoadingButton @click="sendStartScoring()" color="secondary"-->
+<!--                         ref="buttonStartScoring" title="Start Scoring"/>-->
+<!--        <CSLoadingButton @click="sendEndScoring()" color="secondary"-->
+<!--                         ref="buttonEndScoring" title="End Scoring"/>-->
+<!--        <CSLoadingButton @click="sendClearUsers()" color="secondary"-->
+<!--                         ref="buttonClearUsers" title="Clear Users"/>-->
+<!--      </v-flex>-->
+<!--    </v-layout>-->
+<!--    <v-layout justify-center row wrap>-->
+<!--      <v-flex align-self-center shrink>-->
+<!--        <CSTextButton @click="sendUploadInterval()" color="secondary" mask="##"-->
+<!--                      placeholder="in seconds"-->
+<!--                      ref="buttonUploadInterval" title="Upload Interval"/>-->
+<!--      </v-flex>-->
+<!--      <v-flex align-self-center shrink>-->
+<!--        <CSTextButton @click="sendPingInterval()" color="secondary"-->
+<!--                      placeholder="in seconds"-->
+<!--                      ref="buttonPingInterval" title="Ping Interval"/>-->
+<!--      </v-flex>-->
+<!--      <v-flex align-self-center shrink>-->
+<!--        <CSSwitchButton @click="sendAutoReconnectEnabled()" color="secondary"-->
+<!--                        ref="buttonAutoReconnectEnabled" title="Auto-Reconnect Enabled"/>-->
+<!--      </v-flex>-->
+<!--      <v-flex align-self-center shrink>-->
+<!--        <CSTextButton @click="sendAutoReconnectInterval()" color="secondary"-->
+<!--                      placeholder="in seconds"-->
+<!--                      ref="buttonAutoReconnectInterval" title="Auto-Reconnect Interval"/>-->
+<!--      </v-flex>-->
+<!--      <v-flex align-self-center shrink>-->
+<!--        <CSSwitchButton @click="sendAutoStartOnBoot()" color="secondary"-->
+<!--                        ref="buttonAutoStartOnBoot" title="Auto Start On Boot"/>-->
+<!--      </v-flex>-->
+<!--    </v-layout>-->
+<!--    <v-layout justify-center row wrap>-->
+<!--      <v-flex align-self-center shrink>-->
+<!--        <CSLoadingButton @click="sendUpdateCompetitionData()" color="accent"-->
+<!--                         ref="buttonUpdateCompetitionData" title="Update Competition Data"/>-->
+<!--      </v-flex>-->
+<!--      <v-flex align-self-center shrink>-->
+<!--        <CSLoadingButton @click="sendReportBatteryStatus()" color="accent"-->
+<!--                         ref="buttonBatteryStatus" title="Report Battery Status"/>-->
+<!--      </v-flex>-->
+<!--      <v-flex align-self-center shrink>-->
+<!--        <CSSwitchButton @click="sendCompetitionMode()" color="accent"-->
+<!--                        ref="buttonCompetitionMode" title="Competition Mode"/>-->
+<!--      </v-flex>-->
+<!--    </v-layout>-->
+<!--    <CSSnackBar ref="snackBar"/>-->
+<!--  </v-container>-->
+<!--</template>-->
+
+<!--<script lang="ts">-->
+<!--  import { Component } from 'vue-property-decorator'-->
+<!--  import model from '@/model/Model'-->
+<!--  import CSSnackBar from '@/cs/view/CSSnackBar.vue'-->
+<!--  import CSLoadingButton from '@/cs/view/CSLoadingButton.vue'-->
+<!--  import CSSwitchButton from '@/cs/view/CSSwitchButton.vue'-->
+<!--  import CSTextButton from '@/cs/view/CSTextButton.vue'-->
+<!--  import { PortalVueBase } from '@/view/PortalVueBase'-->
+<!--  import { CSButtonType, CSSnackBarType } from '@/cs/vuetify/CSVuetifyTypes'-->
+
+<!--  @Component({-->
+<!--    components: { CSLoadingButton, CSSnackBar, CSSwitchButton, CSTextButton }-->
+<!--  })-->
+<!--  export default class ClientRcherz extends PortalVueBase {-->
+
+<!--    snackBar = () => this.reference<CSSnackBarType>('snackBar')-->
+<!--    buttonLoadUsers = () => this.reference<CSButtonType>('buttonLoadUsers')-->
+<!--    buttonStartScoring = () => this.reference<CSButtonType>('buttonStartScoring')-->
+<!--    buttonEndScoring = () => this.reference<CSButtonType>('buttonEndScoring')-->
+<!--    buttonClearUsers = () => this.reference<CSButtonType>('buttonClearUsers')-->
+
+<!--    buttonUploadInterval = () => this.reference<CSButtonType>('buttonUploadInterval')-->
+<!--    buttonPingInterval = () => this.reference<CSButtonType>('buttonPingInterval')-->
+<!--    buttonAutoReconnectEnabled = () => this.reference<CSButtonType>('buttonAutoReconnectEnabled')-->
+<!--    buttonAutoReconnectInterval = () => this.reference<CSButtonType>('buttonAutoReconnectInterval')-->
+<!--    buttonAutoStartOnBoot = () => this.reference<CSButtonType>('buttonAutoStartOnBoot')-->
+<!--    buttonUpdateCompetitionData = () => this.reference<CSButtonType>('buttonUpdateCompetitionData')-->
+<!--    buttonBatteryStatus = () => this.reference<CSButtonType>('buttonBatteryStatus')-->
+<!--    buttonCompetitionMode = () => this.reference<CSButtonType>('buttonCompetitionMode')-->
+<!--    buttonUpdateApplication = () => this.reference<CSButtonType>('buttonUpdateApplication')-->
+
+<!--    sendLoadUsers = () => this.sendCommand(this.buttonLoadUsers(), 'load_users')-->
+<!--    sendStartScoring = () => this.sendCommand(this.buttonStartScoring(), 'start_scoring')-->
+<!--    sendEndScoring = () => this.sendCommand(this.buttonEndScoring(), 'end_scoring')-->
+<!--    sendClearUsers = () => this.sendCommand(this.buttonClearUsers(), 'clear_users')-->
+<!--    sendUploadInterval = () => this.sendCommand(this.buttonUploadInterval(), 'change_scoring_upload_interval_sec')-->
+<!--    sendPingInterval = () => this.sendCommand(this.buttonPingInterval(), 'ping_interval')-->
+<!--    sendAutoReconnectEnabled = () => this.sendCommand(this.buttonAutoReconnectEnabled(), 'auto_reconnect_enabled')-->
+<!--    sendAutoReconnectInterval = () => this.sendCommand(this.buttonAutoReconnectInterval(), 'auto_reconnect_interval')-->
+<!--    sendAutoStartOnBoot = () => this.sendCommand(this.buttonAutoStartOnBoot(), 'auto_start_on_boot_enabled')-->
+<!--    sendUpdateCompetitionData = () => this.sendCommand(this.buttonUpdateCompetitionData(), 'update_scoring_competition')-->
+<!--    sendReportBatteryStatus = () => this.sendCommand(this.buttonBatteryStatus(), 'report_battery_status')-->
+<!--    sendCompetitionMode = () => this.sendCommand(this.buttonCompetitionMode(), 'competition_mode')-->
+
+<!--    sendCommand(button: CSButtonType, command: string) {-->
+<!--      button.setLoading(true)-->
+<!--      let argumentValue-->
+<!--      if (button.fieldText !== undefined) argumentValue = button.fieldText-->
+<!--      else if (button.isChecked !== undefined) argumentValue = JSON.stringify(button.isChecked)-->
+<!--      model.rcherz.sendCommand(command, argumentValue).-->
+<!--        then(response => {this.snackBar().showInfo(`response: ${JSON.stringify(response.data)}`)}).-->
+<!--        catch(e => { this.snackBar().showError(JSON.stringify(e.response ? e.response.data : e)) }).-->
+<!--        finally(() => {button.setLoading(false)})-->
+<!--    }-->
+<!--  }-->
+
+<!--</script>-->

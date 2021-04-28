@@ -1,0 +1,40 @@
+// import axios, { AxiosPromise, AxiosResponse } from 'axios'
+// import { CSToast } from '@/cs/CSToast'
+//
+// export class WriterJobs {
+//
+//   get url() { return '/' }
+//
+//   handleUserResponse = (response: AxiosResponse<WriterJob[]>) => {
+//     console.log(response.data[0].id)
+//     console.log(response.data[0].title)
+//     console.log(response.data[0].dateString)
+//   }
+//
+//   loadJobs(): AxiosPromise<WriterJob[]> {
+//     const promise = axios.get<WriterJob[]>(this.url + 'data/joblist.json')
+//     promise.then(this.handleUserResponse).catch(e => CSToast.error(e))
+//     return promise
+//   }
+//
+//   loadFavoriteJobs(): AxiosPromise<WriterJob[]> {
+//     const promise = axios.get<WriterJob[]>(this.url + 'data/joblist.json')
+//     promise.then(this.handleUserResponse).catch(e => CSToast.error(e))
+//     return promise
+//   }
+// }
+//
+// export interface WriterJob {
+//   id: number;
+//   title: string;
+//   content: string;
+//   dateString: string;
+//   baseImageName: string;
+//   jobType: WriterJobType;
+//   isFavourite: boolean;
+// }
+//
+// export enum WriterJobType {
+//   TopStory = 'TOP_STORY',
+//   CodeExample = 'CODE_EXAMPLE'
+// }

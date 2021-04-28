@@ -1,0 +1,82 @@
+<!--<template>-->
+<!--  <v-layout row>-->
+<!--    <v-flex align-self-center>-->
+<!--      <div id="firebaseui-auth-container"/>-->
+<!--    </v-flex>-->
+<!--  </v-layout>-->
+<!--</template>-->
+
+<!--<style lang="stylus">-->
+<!--  .mdl-button&#45;&#45;raised.mdl-button&#45;&#45;colored-->
+<!--    background var(&#45;&#45;accent-color)-->
+
+<!--  .mdl-button&#45;&#45;raised.mdl-button&#45;&#45;colored:hover-->
+<!--    background var(&#45;&#45;secondary-color)-->
+
+<!--  .mdl-button&#45;&#45;raised.mdl-button&#45;&#45;colored:active-->
+<!--    background var(&#45;&#45;accent-color)-->
+<!--</style>-->
+
+<!--<style lang="stylus" scoped>-->
+<!--  .v-toolbar__title-->
+<!--    margin 5px-->
+<!--</style>-->
+
+<!--<script lang="ts">-->
+<!--  import * as firebase from 'firebase'-->
+<!--  import firebaseui from 'firebaseui'-->
+<!--  import 'firebaseui/dist/firebaseui.css'-->
+
+<!--  import { Component } from 'vue-property-decorator'-->
+<!--  import { CSToast } from '@/cs/CSToast'-->
+<!--  import { PortalVueBase } from '@/view/PortalVueBase'-->
+
+<!--  @Component-->
+<!--  export default class ClientLogin extends PortalVueBase {-->
+
+<!--    authUI = new firebaseui.auth.AuthUI(firebase.auth())-->
+
+<!--    mounted() {-->
+<!--      super.mounted()-->
+<!--      CSToast.debug(this.constructor.name)-->
+<!--      const uiConfig: firebaseui.auth.Config = {-->
+<!--        signInFlow: 'popup',-->
+<!--        // signInSuccessUrl: this.constants.jobsRoutePath,-->
+<!--        credentialHelper: firebaseui.auth.CredentialHelper.NONE,-->
+<!--        signInOptions: [-->
+<!--          // firebase.auth.GoogleAuthProvider.PROVIDER_ID,-->
+<!--          // firebase.auth.FacebookAuthProvider.PROVIDER_ID,-->
+<!--          // firebase.auth.TwitterAuthProvider.PROVIDER_ID,-->
+<!--          // firebase.auth.GithubAuthProvider.PROVIDER_ID,-->
+<!--          {-->
+<!--            provider: firebase.auth.EmailAuthProvider.PROVIDER_ID-->
+<!--          }-->
+<!--          // firebase.auth.PhoneAuthProvider.PROVIDER_ID-->
+<!--        ],-->
+<!--        // Terms of service url.-->
+<!--        // tosUrl: '<your-tos-url>',-->
+<!--        // Privacy policy url.-->
+<!--        // privacyPolicyUrl: '<your-privacy-policy-url>'-->
+<!--        callbacks: {-->
+<!--          signInSuccessWithAuthResult: (authResult, redirectUrl) => {-->
+<!--            // this.$router.push({ name: this.constants.aboutPageRoute })-->
+<!--            // window.location.href = '/'-->
+<!--            return false-->
+<!--          },-->
+<!--          uiShown: () => {-->
+<!--            // The widget is rendered.-->
+<!--            // Hide the loader.-->
+<!--            // document.getElementById('loader').style.display = 'none';-->
+<!--          }-->
+<!--        }-->
+<!--      }-->
+<!--      this.authUI.start('#firebaseui-auth-container', uiConfig)-->
+<!--    }-->
+
+<!--    destroyed() {-->
+<!--      super.destroyed()-->
+<!--      this.authUI.delete()-->
+<!--    }-->
+
+<!--  }-->
+<!--</script>-->

@@ -1,0 +1,36 @@
+<!--<template>-->
+<!--  <v-tabs fixed-tabs>-->
+<!--    <v-tab>-->
+<!--      Rcherz-->
+<!--    </v-tab>-->
+<!--    <v-tab-item lazy>-->
+<!--      <ClientRcherz/>-->
+<!--    </v-tab-item>-->
+<!--  </v-tabs>-->
+<!--</template>-->
+
+<!--<script lang="ts">-->
+<!--  import { Component } from 'vue-property-decorator'-->
+<!--  import { CSToast } from '@/cs/CSToast'-->
+<!--  import PortalPageBase from '@/view/PortalPageBase'-->
+<!--  import firebase from 'firebase'-->
+<!--  import ClientRcherz from '@/view/Client/ClientRcherz.vue'-->
+
+<!--  @Component({-->
+<!--    components: { ClientRcherz }-->
+<!--  })-->
+<!--  export default class Client extends PortalPageBase {-->
+
+<!--    pageTitle = this.titles.clientPage-->
+
+<!--    beforeRouteEnter(to: any, from: any, next: any) {-->
+<!--      super.beforeRouteEnter(to, from, next)-->
+<!--    }-->
+
+<!--    onLogOutClick() {-->
+<!--      firebase.auth().signOut().then(() => {-->
+<!--        this.$router.push({ name: this.constants.clientLoginRoute })-->
+<!--      })-->
+<!--    }-->
+<!--  }-->
+<!--</script>-->
