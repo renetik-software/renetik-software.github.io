@@ -1,0 +1,53 @@
+# Renetik Music Apps
+
+> Renetik Music Apps is a collection of Android music production tools for performing, recording, looping, sequencing, mixing, and applying real-time audio effects.
+
+This file is a concise guide for AI assistants and agents. Use the linked pages as the authoritative public documentation for Renetik Music Apps, product features, tutorials, privacy information, and developer contact details.
+
+## Main Pages
+
+- [Home](https://www.renetik.com/): Overview of Renetik Music Apps.
+- [Apps](https://www.renetik.com/app/): Index of the available music applications.
+- [Developer](https://www.renetik.com/developer.html): Developer and contact information.
+- [Privacy Policy](https://www.renetik.com/privacy.html): General privacy entry point.
+- [App Privacy Policy](https://www.renetik.com/privacy-app.html): Privacy information for Android applications.
+- [Website Privacy Policy](https://www.renetik.com/privacy-web.html): Privacy information for the website.
+
+## Apps
+
+- [Music Studio](https://www.renetik.com/app/studio/): All-in-one music creation and performance app.
+- [Audio Mixer](https://www.renetik.com/app/mix/): App for mixing, performing, and recording music.
+- [Effect Rack](https://www.renetik.com/app/fxrack/): App for chaining and adjusting real-time audio effects.
+- [Looper](https://www.renetik.com/app/looper/): App for recording and overdubbing loop layers.
+- [Metronome](https://www.renetik.com/app/metronome/): Metronome with tempo, subdivision, accent, instrument, MIDI, and preset features.
+- [MIDI Controller](https://www.renetik.com/app/midicontroller/): Configurable MIDI controller for musical performance and parameter control.
+- [MIDI Sequencer](https://www.renetik.com/app/midisequencer/): MIDI sequencing app for pattern editing and playback.
+
+## Feature Documentation
+
+- [Configuration](https://www.renetik.com/feature/app/configuration.html): App configuration features.
+- [Data Storage](https://www.renetik.com/feature/app/data.html): Data and storage behavior.
+- [Free Use](https://www.renetik.com/feature/app/free-use.html): Free-use information.
+- [MIDI Control](https://www.renetik.com/feature/app/midi-control.html): MIDI control features.
+- [MIDI Sync](https://www.renetik.com/feature/app/midi-sync.html): MIDI synchronization features.
+- [Sampler](https://www.renetik.com/feature/app/sampler.html): Sampler behavior and feature overview.
+- [Themes](https://www.renetik.com/feature/app/themes.html): Theme support.
+- [Translation](https://www.renetik.com/feature/app/translation.html): Translation and localization.
+- [Audio Effects](https://www.renetik.com/feature/audio/effect/): Audio effect documentation.
+- [Controller Effects](https://www.renetik.com/feature/controller/effects/): Controller effect documentation.
+- [Sequencer](https://www.renetik.com/feature/sequencer/): Sequencer feature documentation.
+
+## Tutorials
+
+- [Music Studio Tutorials](https://www.renetik.com/app/studio/tutorials.html): Tutorials for Music Studio.
+- [Audio Mixer Tutorials](https://www.renetik.com/app/mix/tutorials.html): Tutorials for Audio Mixer.
+- [Recording Tutorial](https://www.renetik.com/app/mix/tutorial/recording.html): Recording tutorial.
+- [Effect Rack Tutorials](https://www.renetik.com/app/fxrack/tutorials.html): Tutorials for Effect Rack.
+- [Looper Tutorials](https://www.renetik.com/app/looper/tutorials.html): Tutorials for Looper.
+- [Metronome Tutorials](https://www.renetik.com/app/metronome/tutorials.html): Tutorials for Metronome.
+- [Sampler Recording Tutorial](https://www.renetik.com/feature/controller/sampler/tutorial/recording.html): Recording tutorial for the sampler controller.
+
+## Machine-Readable Discovery
+
+- [Sitemap](https://www.renetik.com/sitemap.xml): Complete list of generated public pages.
+- [Robots](https://www.renetik.com/robots.txt): Crawler access policy.
