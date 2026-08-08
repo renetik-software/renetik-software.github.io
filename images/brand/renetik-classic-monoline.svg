@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Renetik classic monoline logo</title>
+  <g fill="none" stroke="black" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="256" cy="256" r="96"/>
+    <circle cx="352" cy="256" r="96"/>
+    <circle cx="304" cy="339.138" r="96"/>
+    <circle cx="208" cy="339.138" r="96"/>
+    <circle cx="160" cy="256" r="96"/>
+    <circle cx="208" cy="172.862" r="96"/>
+    <circle cx="304" cy="172.862" r="96"/>
+  </g>
+</svg>

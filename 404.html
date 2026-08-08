@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <title>Renetik</title>
+  <script>
+    (async function () {
+      var path = location.pathname
+      var appPath = /^\/app(?:\/|$)/.test(path)
+      if (appPath) {
+        var showMusicApps404 = function () {
+          var source = path + location.search + location.hash
+          location.replace('/app/404.html?from=' + encodeURIComponent(source))
+        }
+        var localizedAppPath = path.match(/^\/app\/([a-z]{2,3})(\/.*)?$/)
+        if (!localizedAppPath) {
+          showMusicApps404()
+          return
+        }
+
+        try {
+          var localizedRoot = '/app/' + localizedAppPath[1] + '/'
+          var localizedRootResponse = await fetch(localizedRoot, {method: 'HEAD'})
+          if (localizedRootResponse.ok) {
+            showMusicApps404()
+            return
+          }
+
+          var englishPath = '/app' + (localizedAppPath[2] || '/')
+          var englishResponse = await fetch(englishPath, {method: 'HEAD'})
+          if (englishResponse.ok) {
+            location.replace(englishPath + location.search + location.hash)
+            return
+          }
+        } catch (_) {
+          // Network failure should retain the Music Apps 404 rather than hide a real missing page.
+        }
+        showMusicApps404()
+        return
+      }
+
+      var servicesPath = /^\/(?:[a-z]{2,3}\/)?services(?:\/|$)/.test(path)
+      if (servicesPath) {
+        try {
+          sessionStorage.setItem('servicesRedirect', location.href)
+        } catch (_) {
+          // The gateway is still a safe fallback when session storage is blocked.
+        }
+      }
+
+      // Land on the gateway in the language the visitor was already reading. The root is confirmed
+      // to exist before redirecting, so an unknown prefix such as /zz/ cannot bounce back here.
+      var localePath = path.match(/^\/([a-z]{2,3})\//)
+      if (localePath) {
+        try {
+          var localeRoot = '/' + localePath[1] + '/'
+          var localeResponse = await fetch(localeRoot, {method: 'HEAD'})
+          if (localeResponse.ok) {
+            location.replace(localeRoot)
+            return
+          }
+        } catch (_) {
+          // The English gateway below still recovers the visit when the check cannot run.
+        }
+      }
+      location.replace('/')
+    })()
+  </script>
+  <noscript><meta http-equiv="refresh" content="0;URL=/"></noscript>
+</head>
+<body></body>
+</html>

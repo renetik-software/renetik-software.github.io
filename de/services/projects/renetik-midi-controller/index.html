@@ -1,0 +1,789 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f5f7"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#26282C"><style>html { background: #fff; }
+    @media (prefers-color-scheme: dark) {
+      html { background: #191A1C; }
+    }</style><style>.rd-cookie-banner {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 9999;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px 18px;
+      padding: 14px 20px;
+      background: #f2f2f4;
+      border-top: 1px solid #d0d0d4;
+      color: #1a1a1a;
+      font-family: Inter, Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.45;
+      box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.12);
+    }
+    .rd-cookie-banner--hidden { display: none; }
+    .rd-cookie-message { margin: 0; max-width: 640px; }
+    .rd-cookie-message a { color: #0b63ce; }
+    .rd-cookie-actions { display: flex; gap: 10px; }
+    .rd-cookie-banner button {
+      font: inherit;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 1px solid #0b63ce;
+      background: #0b63ce;
+      color: #fff;
+    }
+    .rd-cookie-banner button:hover,
+    .rd-cookie-banner button:focus {
+      background: #094ba0;
+      border-color: #094ba0;
+      outline: none;
+    }
+    @media (prefers-color-scheme: dark) {
+      .rd-cookie-banner {
+        background: #26282c;
+        border-top-color: #3a3d44;
+        color: #eee;
+        box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.4);
+      }
+      .rd-cookie-message a { color: #7ab8ff; }
+      .rd-cookie-banner button { background: #1a4fa0; border-color: #1a4fa0; }
+      .rd-cookie-banner button:hover,
+      .rd-cookie-banner button:focus { background: #094ba0; border-color: #094ba0; }
+    }
+    /* A fixed-position consent prompt has no meaning on a printed or PDF-exported page, and
+       Chrome's print pipeline turns any relative href still on screen into a link annotation
+       resolved against the page's current origin (e.g. the local generator server). */
+    @media print {
+      .rd-cookie-banner { display: none !important; }
+    }</style><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="icon" href="/favicon.ico"><link rel="manifest" href="/site.webmanifest"><title>MIDI Controller | Renetik Portal</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="preconnect" href="https://use.fontawesome.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"><script>window.__rdConsentStrings = {"en":{"message":"We use analytics cookies to understand how this site is used. They are set only if you accept.","accept":"Accept","reject":"Reject","policy":"Cookie Policy"},"de":{"message":"Wir verwenden Analyse-Cookies, um zu verstehen, wie diese Website genutzt wird. Sie werden nur gesetzt, wenn Sie zustimmen.","accept":"Akzeptieren","reject":"Ablehnen","policy":"Cookie-Richtlinie"},"es":{"message":"Usamos cookies analíticas para comprender cómo se utiliza este sitio. Solo se establecen si aceptas.","accept":"Aceptar","reject":"Rechazar","policy":"Política de cookies"},"fr":{"message":"Nous utilisons des cookies analytiques pour comprendre comment ce site est utilisé. Ils ne sont déposés que si vous acceptez.","accept":"Accepter","reject":"Refuser","policy":"Politique des cookies"},"id":{"message":"Kami menggunakan cookie analitik untuk memahami bagaimana situs ini digunakan. Cookie hanya dipasang jika Anda menyetujui.","accept":"Setuju","reject":"Tolak","policy":"Kebijakan Cookie"},"ja":{"message":"このサイトの利用状況を理解するために分析Cookieを使用します。同意いただいた場合にのみ設定されます。","accept":"同意する","reject":"拒否","policy":"Cookieポリシー"},"ko":{"message":"이 사이트의 사용 방식을 이해하기 위해 분석 쿠키를 사용합니다. 동의하실 때만 설정됩니다.","accept":"동의","reject":"거부","policy":"쿠키 정책"},"pt":{"message":"Usamos cookies analíticos para entender como este site é utilizado. Eles só são definidos se você aceitar.","accept":"Aceitar","reject":"Recusar","policy":"Política de Cookies"},"sk":{"message":"Na pochopenie spôsobu používania tejto lokality používame analytické cookies. Nastavia sa iba vtedy, ak súhlasíte.","accept":"Prijať","reject":"Odmietnuť","policy":"Zásady používania cookies"},"zh":{"message":"我们使用分析型 Cookie 来了解本网站的使用情况。仅在您接受时才会设置这些 Cookie。","accept":"接受","reject":"拒绝","policy":"Cookie 政策"}};</script><script>// Consent Mode v2 default-deny: first executable script on the page, before any analytics load.
+    window.dataLayer = window.dataLayer || []
+    function gtag() { window.dataLayer.push(arguments) }
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    })</script><script>(function () {
+      var STORAGE_KEY = 'cookieConsent'
+      var CONSENT_VERSION = 1
+      var MAX_AGE_MS = 365 * 24 * 60 * 60 * 1000
+      var PROPERTY = 'G-X4FZSWZ649'
+      var loaded = false
+
+      function strings() {
+        var table = window.__rdConsentStrings || {}
+        var lang = document.documentElement.lang || 'en'
+        return table[lang] || table.en
+          || {message: '', accept: 'Accept', reject: 'Reject', policy: 'Cookie Policy'}
+      }
+
+      function banner() { return document.getElementById('rd-cookie-banner') }
+
+      function readDecision() {
+        try {
+          var raw = window.localStorage.getItem(STORAGE_KEY)
+          if (!raw) return null
+          var record = JSON.parse(raw)
+          if (!record || record.version !== CONSENT_VERSION) return null
+          if (record.analytics !== 'granted' && record.analytics !== 'denied') return null
+          if (typeof record.decidedAt !== 'number' || Date.now() - record.decidedAt >= MAX_AGE_MS) return null
+          return record
+        } catch (_) {
+          return null
+        }
+      }
+
+      function writeDecision(analytics) {
+        try {
+          window.localStorage.setItem(STORAGE_KEY, JSON.stringify({
+            version: CONSENT_VERSION,
+            analytics: analytics,
+            decidedAt: Date.now()
+          }))
+        } catch (_) {
+          // Storage blocked: the in-page choice still applies for this page load.
+        }
+      }
+
+      function removeDecision() {
+        try {
+          window.localStorage.removeItem(STORAGE_KEY)
+        } catch (_) {
+          // Storage blocked: nothing to remove.
+        }
+      }
+
+      function populate() {
+        var el = banner()
+        if (!el) return
+        var s = strings()
+        var set = function (attr, value) {
+          var node = el.querySelector('[data-consent="' + attr + '"]')
+          if (node) node.textContent = value
+        }
+        set('message', s.message)
+        set('policy', s.policy)
+        set('accept', s.accept)
+        set('reject', s.reject)
+      }
+
+      function showBanner() {
+        var el = banner()
+        if (!el) return
+        populate()
+        el.classList.remove('rd-cookie-banner--hidden')
+        var first = el.querySelector('[data-consent="accept"]')
+        if (first) first.focus()
+      }
+
+      function hideBanner() {
+        var el = banner()
+        if (el) el.classList.add('rd-cookie-banner--hidden')
+      }
+
+      // Analytics loads only after consent. gtag.js stays out of the static HTML so a
+      // first-time visitor with clean storage makes no request to googletagmanager.com.
+      window.__rdLoadAnalytics = function () {
+        if (loaded) return
+        loaded = true
+        var script = document.createElement('script')
+        script.async = true
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + PROPERTY
+        document.head.appendChild(script)
+        gtag('js', new Date())
+        gtag('config', PROPERTY)
+      }
+
+      window.__rdApplyConsent = function (granted) {
+        writeDecision(granted ? 'granted' : 'denied')
+        gtag('consent', 'update', {analytics_storage: granted ? 'granted' : 'denied'})
+        if (granted) window.__rdLoadAnalytics()
+        hideBanner()
+      }
+
+      window.__rdReopenConsent = function () {
+        removeDecision()
+        gtag('consent', 'update', {analytics_storage: 'denied'})
+        showBanner()
+      }
+
+      function clearSettingsHash() {
+        if (location.hash === '#cookie-settings') {
+          history.replaceState(null, '', location.pathname + location.search)
+        }
+      }
+
+      function onHashChange() {
+        if (location.hash === '#cookie-settings') {
+          window.__rdReopenConsent()
+          clearSettingsHash()
+        }
+      }
+
+      function init() {
+        var el = banner()
+        if (el) {
+          var accept = el.querySelector('[data-consent="accept"]')
+          var reject = el.querySelector('[data-consent="reject"]')
+          if (accept) accept.addEventListener('click', function () { window.__rdApplyConsent(true) })
+          if (reject) reject.addEventListener('click', function () { window.__rdApplyConsent(false) })
+        }
+        window.addEventListener('hashchange', onHashChange)
+        if (location.hash === '#cookie-settings') {
+          window.__rdReopenConsent()
+          clearSettingsHash()
+          return
+        }
+        var decision = readDecision()
+        if (decision && decision.analytics === 'granted') {
+          window.__rdLoadAnalytics()
+        } else if (!decision) {
+          showBanner()
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init)
+      } else {
+        init()
+      }
+    })()</script><script>(function () {
+      var redirect = null
+      try {
+        redirect = sessionStorage.getItem('servicesRedirect')
+        sessionStorage.removeItem('servicesRedirect')
+      } catch (_) {
+        // Static routes still work when session storage is blocked.
+      }
+      if (!redirect || redirect === location.href) return
+
+      var target = new URL(redirect, location.origin)
+      var servicesPath = /^\/(?:[a-z]{2,3}\/)?services(?:\/|$)/.test(target.pathname)
+      var appPath = /^\/(?:[a-z]{2,3}\/)?app(?:\/|$)/.test(target.pathname)
+      if (servicesPath && !appPath && target.origin === location.origin) {
+        history.replaceState(null, '', target.pathname + target.search + target.hash)
+      }
+    })()</script><script defer="defer" src="/js/chunk-vendors.881083a2.js" type="module"></script><script defer="defer" src="/js/app.cb5a0c9e.js" type="module"></script><link href="/css/chunk-vendors.b30c8270.css" rel="stylesheet"><link href="/css/app.88a7ad19.css" rel="stylesheet"><script defer="defer" src="/js/chunk-vendors-legacy.e4481c01.js" nomodule=""></script><script defer="defer" src="/js/app-legacy.6e65867a.js" nomodule=""></script><style type="text/css">.toasted{padding:0 20px}.toasted.rounded{border-radius:24px}.toasted .primary,.toasted.toasted-primary{border-radius:2px;min-height:38px;line-height:1.1em;background-color:#353535;padding:6px 20px;font-size:15px;font-weight:300;color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24)}.toasted .primary.success,.toasted.toasted-primary.success{background:#4caf50}.toasted .primary.error,.toasted.toasted-primary.error{background:#f44336}.toasted .primary.info,.toasted.toasted-primary.info{background:#3f51b5}.toasted .primary .action,.toasted.toasted-primary .action{color:#a1c2fa}.toasted.bubble{border-radius:30px;min-height:38px;line-height:1.1em;background-color:#ff7043;padding:0 20px;font-size:15px;font-weight:300;color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24)}.toasted.bubble.success{background:#4caf50}.toasted.bubble.error{background:#f44336}.toasted.bubble.info{background:#3f51b5}.toasted.bubble .action{color:#8e2b0c}.toasted.outline{border-radius:30px;min-height:38px;line-height:1.1em;background-color:#fff;border:1px solid #676767;padding:0 20px;font-size:15px;color:#676767;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);font-weight:700}.toasted.outline.success{color:#4caf50;border-color:#4caf50}.toasted.outline.error{color:#f44336;border-color:#f44336}.toasted.outline.info{color:#3f51b5;border-color:#3f51b5}.toasted.outline .action{color:#607d8b}.toasted-container{position:fixed;z-index:10000}.toasted-container,.toasted-container.full-width{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column}.toasted-container.full-width{max-width:86%;width:100%}.toasted-container.full-width.fit-to-screen{min-width:100%}.toasted-container.full-width.fit-to-screen .toasted:first-child{margin-top:0}.toasted-container.full-width.fit-to-screen.top-right{top:0;right:0}.toasted-container.full-width.fit-to-screen.top-left{top:0;left:0}.toasted-container.full-width.fit-to-screen.top-center{top:0;left:0;-webkit-transform:translateX(0);transform:translateX(0)}.toasted-container.full-width.fit-to-screen.bottom-right{right:0;bottom:0}.toasted-container.full-width.fit-to-screen.bottom-left{left:0;bottom:0}.toasted-container.full-width.fit-to-screen.bottom-center{left:0;bottom:0;-webkit-transform:translateX(0);transform:translateX(0)}.toasted-container.top-right{top:10%;right:7%}.toasted-container.top-left{top:10%;left:7%}.toasted-container.top-center{top:10%;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.toasted-container.bottom-right{right:5%;bottom:7%}.toasted-container.bottom-left{left:5%;bottom:7%}.toasted-container.bottom-center{left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);bottom:7%}.toasted-container.bottom-left .toasted,.toasted-container.top-left .toasted{float:left}.toasted-container.bottom-right .toasted,.toasted-container.top-right .toasted{float:right}.toasted-container .toasted{top:35px;width:auto;clear:both;margin-top:10px;position:relative;max-width:100%;height:auto;word-break:normal;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between;box-sizing:inherit}.toasted-container .toasted .fa,.toasted-container .toasted .fab,.toasted-container .toasted .far,.toasted-container .toasted .fas,.toasted-container .toasted .material-icons,.toasted-container .toasted .mdi{margin-right:.5rem;margin-left:-.4rem}.toasted-container .toasted .fa.after,.toasted-container .toasted .fab.after,.toasted-container .toasted .far.after,.toasted-container .toasted .fas.after,.toasted-container .toasted .material-icons.after,.toasted-container .toasted .mdi.after{margin-left:.5rem;margin-right:-.4rem}.toasted-container .toasted .action{text-decoration:none;font-size:.8rem;padding:8px;margin:5px -7px 5px 7px;border-radius:3px;text-transform:uppercase;letter-spacing:.03em;font-weight:600;cursor:pointer}.toasted-container .toasted .action.icon{padding:4px;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}.toasted-container .toasted .action.icon .fa,.toasted-container .toasted .action.icon .material-icons,.toasted-container .toasted .action.icon .mdi{margin-right:0;margin-left:4px}.toasted-container .toasted .action.icon:hover{text-decoration:none}.toasted-container .toasted .action:hover{text-decoration:underline}@media only screen and (max-width:600px){.toasted-container{min-width:100%}.toasted-container .toasted:first-child{margin-top:0}.toasted-container.top-right{top:0;right:0}.toasted-container.top-left{top:0;left:0}.toasted-container.top-center{top:0;left:0;-webkit-transform:translateX(0);transform:translateX(0)}.toasted-container.bottom-right{right:0;bottom:0}.toasted-container.bottom-left{left:0;bottom:0}.toasted-container.bottom-center{left:0;bottom:0;-webkit-transform:translateX(0);transform:translateX(0)}.toasted-container.bottom-center,.toasted-container.top-center{-ms-flex-align:stretch!important;align-items:stretch!important}.toasted-container.bottom-left .toasted,.toasted-container.bottom-right .toasted,.toasted-container.top-left .toasted,.toasted-container.top-right .toasted{float:none}.toasted-container .toasted{border-radius:0}}</style><link rel="stylesheet" type="text/css" href="/css/portal.e3e75fbd.css"><link rel="stylesheet" type="text/css" href="/css/project-detail.ef7ab205.css"><link data-vue-meta="1" data-vmid="canonical" rel="canonical" href="https://renetik.com/de/services/projects/renetik-midi-controller/"><link data-vue-meta="1" data-vmid="alternate-en" rel="alternate" hreflang="en" href="https://renetik.com/services/projects/renetik-midi-controller/"><link data-vue-meta="1" data-vmid="alternate-de" rel="alternate" hreflang="de" href="https://renetik.com/de/services/projects/renetik-midi-controller/"><link data-vue-meta="1" data-vmid="alternate-es" rel="alternate" hreflang="es" href="https://renetik.com/es/services/projects/renetik-midi-controller/"><link data-vue-meta="1" data-vmid="alternate-fr" rel="alternate" hreflang="fr" href="https://renetik.com/fr/services/projects/renetik-midi-controller/"><link data-vue-meta="1" data-vmid="alternate-id" rel="alternate" hreflang="id" href="https://renetik.com/id/services/projects/renetik-midi-controller/"><link data-vue-meta="1" data-vmid="alternate-ja" rel="alternate" hreflang="ja" href="https://renetik.com/ja/services/projects/renetik-midi-controller/"><link data-vue-meta="1" data-vmid="alternate-ko" rel="alternate" hreflang="ko" href="https://renetik.com/ko/services/projects/renetik-midi-controller/"><link data-vue-meta="1" data-vmid="alternate-pt" rel="alternate" hreflang="pt" href="https://renetik.com/pt/services/projects/renetik-midi-controller/"><link data-vue-meta="1" data-vmid="alternate-sk" rel="alternate" hreflang="sk" href="https://renetik.com/sk/services/projects/renetik-midi-controller/"><link data-vue-meta="1" data-vmid="alternate-zh" rel="alternate" hreflang="zh" href="https://renetik.com/zh/services/projects/renetik-midi-controller/"><link data-vue-meta="1" data-vmid="alternate-default" rel="alternate" hreflang="x-default" href="https://renetik.com/services/projects/renetik-midi-controller/"><meta data-vue-meta="1" data-vmid="og:image:type" property="og:image:type" content="image/jpeg"><meta data-vue-meta="1" data-vmid="og:image:width" property="og:image:width" content="1200"><meta data-vue-meta="1" data-vmid="og:image:height" property="og:image:height" content="630"><meta data-vue-meta="1" data-vmid="description" name="description" content="Belegen Sie anpassbare Keyboards, Pads und Fader für eine taktile MIDI-Performance und -Aufnahme. MIDI Controller verwandelt ein Android-Gerät in eine..."><meta data-vue-meta="1" data-vmid="og:site_name" property="og:site_name" content="Renetik Portal — Softwareentwicklung &amp; Android-Musik-Apps"><meta data-vue-meta="1" data-vmid="og:title" property="og:title" content="MIDI Controller | Renetik Portal"><meta data-vue-meta="1" data-vmid="og:description" property="og:description" content="Belegen Sie anpassbare Keyboards, Pads und Fader für eine taktile MIDI-Performance und -Aufnahme. MIDI Controller verwandelt ein Android-Gerät in eine..."><meta data-vue-meta="1" data-vmid="og:image" property="og:image" content="https://renetik.com/images/Projects/RenetikMusicApps/feature-midi-controller.webp"><meta data-vue-meta="1" data-vmid="og:image:alt" property="og:image:alt" content="MIDI Controller | Renetik Portal"><meta data-vue-meta="1" data-vmid="og:url" property="og:url" content="https://renetik.com/de/services/projects/renetik-midi-controller/"><meta data-vue-meta="1" data-vmid="og:type" property="og:type" content="website"><meta data-vue-meta="1" data-vmid="og:locale" property="og:locale" content="de_DE"><meta data-vue-meta="1" data-vmid="og:locale:alternate-en" property="og:locale:alternate" content="en_US"><meta data-vue-meta="1" data-vmid="og:locale:alternate-es" property="og:locale:alternate" content="es_ES"><meta data-vue-meta="1" data-vmid="og:locale:alternate-fr" property="og:locale:alternate" content="fr_FR"><meta data-vue-meta="1" data-vmid="og:locale:alternate-id" property="og:locale:alternate" content="id_ID"><meta data-vue-meta="1" data-vmid="og:locale:alternate-ja" property="og:locale:alternate" content="ja_JP"><meta data-vue-meta="1" data-vmid="og:locale:alternate-ko" property="og:locale:alternate" content="ko_KR"><meta data-vue-meta="1" data-vmid="og:locale:alternate-pt" property="og:locale:alternate" content="pt_BR"><meta data-vue-meta="1" data-vmid="og:locale:alternate-sk" property="og:locale:alternate" content="sk_SK"><meta data-vue-meta="1" data-vmid="og:locale:alternate-zh" property="og:locale:alternate" content="zh_CN"><meta data-vue-meta="1" data-vmid="twitter:card" name="twitter:card" content="summary_large_image"><meta data-vue-meta="1" data-vmid="twitter:site" name="twitter:site" content="@renetiksoftware"><meta data-vue-meta="1" data-vmid="twitter:creator" name="twitter:creator" content="@renetiksoftware"><meta data-vue-meta="1" data-vmid="twitter:title" name="twitter:title" content="MIDI Controller | Renetik Portal"><meta data-vue-meta="1" data-vmid="twitter:description" name="twitter:description" content="Belegen Sie anpassbare Keyboards, Pads und Fader für eine taktile MIDI-Performance und -Aufnahme. MIDI Controller verwandelt ein Android-Gerät in eine..."><meta data-vue-meta="1" data-vmid="twitter:image" name="twitter:image" content="https://renetik.com/images/Projects/RenetikMusicApps/feature-midi-controller.webp"><meta data-vue-meta="1" data-vmid="twitter:image:alt" name="twitter:image:alt" content="MIDI Controller | Renetik Portal"><style data-vue-meta="1" id="vuetify-theme-stylesheet" type="text/css">a { color: #306fdb; }
+.primary {
+  background-color: #306fdb !important;
+  border-color: #306fdb !important;
+}
+.primary--text {
+  color: #306fdb !important;
+  caret-color: #306fdb !important;
+}
+.primary.lighten-5 {
+  background-color: #d3f5ff !important;
+  border-color: #d3f5ff !important;
+}
+.primary--text.text--lighten-5 {
+  color: #d3f5ff !important;
+  caret-color: #d3f5ff !important;
+}
+.primary.lighten-4 {
+  background-color: #b5d8ff !important;
+  border-color: #b5d8ff !important;
+}
+.primary--text.text--lighten-4 {
+  color: #b5d8ff !important;
+  caret-color: #b5d8ff !important;
+}
+.primary.lighten-3 {
+  background-color: #96bdff !important;
+  border-color: #96bdff !important;
+}
+.primary--text.text--lighten-3 {
+  color: #96bdff !important;
+  caret-color: #96bdff !important;
+}
+.primary.lighten-2 {
+  background-color: #77a2ff !important;
+  border-color: #77a2ff !important;
+}
+.primary--text.text--lighten-2 {
+  color: #77a2ff !important;
+  caret-color: #77a2ff !important;
+}
+.primary.lighten-1 {
+  background-color: #5688f8 !important;
+  border-color: #5688f8 !important;
+}
+.primary--text.text--lighten-1 {
+  color: #5688f8 !important;
+  caret-color: #5688f8 !important;
+}
+.primary.darken-1 {
+  background-color: #0057bf !important;
+  border-color: #0057bf !important;
+}
+.primary--text.text--darken-1 {
+  color: #0057bf !important;
+  caret-color: #0057bf !important;
+}
+.primary.darken-2 {
+  background-color: #0040a3 !important;
+  border-color: #0040a3 !important;
+}
+.primary--text.text--darken-2 {
+  color: #0040a3 !important;
+  caret-color: #0040a3 !important;
+}
+.primary.darken-3 {
+  background-color: #002c88 !important;
+  border-color: #002c88 !important;
+}
+.primary--text.text--darken-3 {
+  color: #002c88 !important;
+  caret-color: #002c88 !important;
+}
+.primary.darken-4 {
+  background-color: #00196e !important;
+  border-color: #00196e !important;
+}
+.primary--text.text--darken-4 {
+  color: #00196e !important;
+  caret-color: #00196e !important;
+}
+.secondary {
+  background-color: #3f51b5 !important;
+  border-color: #3f51b5 !important;
+}
+.secondary--text {
+  color: #3f51b5 !important;
+  caret-color: #3f51b5 !important;
+}
+.secondary.lighten-5 {
+  background-color: #d2d2ff !important;
+  border-color: #d2d2ff !important;
+}
+.secondary--text.text--lighten-5 {
+  color: #d2d2ff !important;
+  caret-color: #d2d2ff !important;
+}
+.secondary.lighten-4 {
+  background-color: #b5b7ff !important;
+  border-color: #b5b7ff !important;
+}
+.secondary--text.text--lighten-4 {
+  color: #b5b7ff !important;
+  caret-color: #b5b7ff !important;
+}
+.secondary.lighten-3 {
+  background-color: #989cff !important;
+  border-color: #989cff !important;
+}
+.secondary--text.text--lighten-3 {
+  color: #989cff !important;
+  caret-color: #989cff !important;
+}
+.secondary.lighten-2 {
+  background-color: #7b82ee !important;
+  border-color: #7b82ee !important;
+}
+.secondary--text.text--lighten-2 {
+  color: #7b82ee !important;
+  caret-color: #7b82ee !important;
+}
+.secondary.lighten-1 {
+  background-color: #5e69d1 !important;
+  border-color: #5e69d1 !important;
+}
+.secondary--text.text--lighten-1 {
+  color: #5e69d1 !important;
+  caret-color: #5e69d1 !important;
+}
+.secondary.darken-1 {
+  background-color: #193a9a !important;
+  border-color: #193a9a !important;
+}
+.secondary--text.text--darken-1 {
+  color: #193a9a !important;
+  caret-color: #193a9a !important;
+}
+.secondary.darken-2 {
+  background-color: #00257f !important;
+  border-color: #00257f !important;
+}
+.secondary--text.text--darken-2 {
+  color: #00257f !important;
+  caret-color: #00257f !important;
+}
+.secondary.darken-3 {
+  background-color: #001265 !important;
+  border-color: #001265 !important;
+}
+.secondary--text.text--darken-3 {
+  color: #001265 !important;
+  caret-color: #001265 !important;
+}
+.secondary.darken-4 {
+  background-color: #00004d !important;
+  border-color: #00004d !important;
+}
+.secondary--text.text--darken-4 {
+  color: #00004d !important;
+  caret-color: #00004d !important;
+}
+.accent {
+  background-color: #e65100 !important;
+  border-color: #e65100 !important;
+}
+.accent--text {
+  color: #e65100 !important;
+  caret-color: #e65100 !important;
+}
+.accent.lighten-5 {
+  background-color: #ffdd8e !important;
+  border-color: #ffdd8e !important;
+}
+.accent--text.text--lighten-5 {
+  color: #ffdd8e !important;
+  caret-color: #ffdd8e !important;
+}
+.accent.lighten-4 {
+  background-color: #ffc174 !important;
+  border-color: #ffc174 !important;
+}
+.accent--text.text--lighten-4 {
+  color: #ffc174 !important;
+  caret-color: #ffc174 !important;
+}
+.accent.lighten-3 {
+  background-color: #ffa459 !important;
+  border-color: #ffa459 !important;
+}
+.accent--text.text--lighten-3 {
+  color: #ffa459 !important;
+  caret-color: #ffa459 !important;
+}
+.accent.lighten-2 {
+  background-color: #ff883f !important;
+  border-color: #ff883f !important;
+}
+.accent--text.text--lighten-2 {
+  color: #ff883f !important;
+  caret-color: #ff883f !important;
+}
+.accent.lighten-1 {
+  background-color: #ff6d24 !important;
+  border-color: #ff6d24 !important;
+}
+.accent--text.text--lighten-1 {
+  color: #ff6d24 !important;
+  caret-color: #ff6d24 !important;
+}
+.accent.darken-1 {
+  background-color: #c53400 !important;
+  border-color: #c53400 !important;
+}
+.accent--text.text--darken-1 {
+  color: #c53400 !important;
+  caret-color: #c53400 !important;
+}
+.accent.darken-2 {
+  background-color: #a61000 !important;
+  border-color: #a61000 !important;
+}
+.accent--text.text--darken-2 {
+  color: #a61000 !important;
+  caret-color: #a61000 !important;
+}
+.accent.darken-3 {
+  background-color: #880000 !important;
+  border-color: #880000 !important;
+}
+.accent--text.text--darken-3 {
+  color: #880000 !important;
+  caret-color: #880000 !important;
+}
+.accent.darken-4 {
+  background-color: #6c0000 !important;
+  border-color: #6c0000 !important;
+}
+.accent--text.text--darken-4 {
+  color: #6c0000 !important;
+  caret-color: #6c0000 !important;
+}
+.error {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+.error--text {
+  color: #ff5252 !important;
+  caret-color: #ff5252 !important;
+}
+.error.lighten-5 {
+  background-color: #ffe4d5 !important;
+  border-color: #ffe4d5 !important;
+}
+.error--text.text--lighten-5 {
+  color: #ffe4d5 !important;
+  caret-color: #ffe4d5 !important;
+}
+.error.lighten-4 {
+  background-color: #ffc6b9 !important;
+  border-color: #ffc6b9 !important;
+}
+.error--text.text--lighten-4 {
+  color: #ffc6b9 !important;
+  caret-color: #ffc6b9 !important;
+}
+.error.lighten-3 {
+  background-color: #ffa99e !important;
+  border-color: #ffa99e !important;
+}
+.error--text.text--lighten-3 {
+  color: #ffa99e !important;
+  caret-color: #ffa99e !important;
+}
+.error.lighten-2 {
+  background-color: #ff8c84 !important;
+  border-color: #ff8c84 !important;
+}
+.error--text.text--lighten-2 {
+  color: #ff8c84 !important;
+  caret-color: #ff8c84 !important;
+}
+.error.lighten-1 {
+  background-color: #ff6f6a !important;
+  border-color: #ff6f6a !important;
+}
+.error--text.text--lighten-1 {
+  color: #ff6f6a !important;
+  caret-color: #ff6f6a !important;
+}
+.error.darken-1 {
+  background-color: #df323b !important;
+  border-color: #df323b !important;
+}
+.error--text.text--darken-1 {
+  color: #df323b !important;
+  caret-color: #df323b !important;
+}
+.error.darken-2 {
+  background-color: #bf0025 !important;
+  border-color: #bf0025 !important;
+}
+.error--text.text--darken-2 {
+  color: #bf0025 !important;
+  caret-color: #bf0025 !important;
+}
+.error.darken-3 {
+  background-color: #9f0010 !important;
+  border-color: #9f0010 !important;
+}
+.error--text.text--darken-3 {
+  color: #9f0010 !important;
+  caret-color: #9f0010 !important;
+}
+.error.darken-4 {
+  background-color: #800000 !important;
+  border-color: #800000 !important;
+}
+.error--text.text--darken-4 {
+  color: #800000 !important;
+  caret-color: #800000 !important;
+}
+.info {
+  background-color: #2196f3 !important;
+  border-color: #2196f3 !important;
+}
+.info--text {
+  color: #2196f3 !important;
+  caret-color: #2196f3 !important;
+}
+.info.lighten-5 {
+  background-color: #d4ffff !important;
+  border-color: #d4ffff !important;
+}
+.info--text.text--lighten-5 {
+  color: #d4ffff !important;
+  caret-color: #d4ffff !important;
+}
+.info.lighten-4 {
+  background-color: #b5ffff !important;
+  border-color: #b5ffff !important;
+}
+.info--text.text--lighten-4 {
+  color: #b5ffff !important;
+  caret-color: #b5ffff !important;
+}
+.info.lighten-3 {
+  background-color: #95e8ff !important;
+  border-color: #95e8ff !important;
+}
+.info--text.text--lighten-3 {
+  color: #95e8ff !important;
+  caret-color: #95e8ff !important;
+}
+.info.lighten-2 {
+  background-color: #75ccff !important;
+  border-color: #75ccff !important;
+}
+.info--text.text--lighten-2 {
+  color: #75ccff !important;
+  caret-color: #75ccff !important;
+}
+.info.lighten-1 {
+  background-color: #51b0ff !important;
+  border-color: #51b0ff !important;
+}
+.info--text.text--lighten-1 {
+  color: #51b0ff !important;
+  caret-color: #51b0ff !important;
+}
+.info.darken-1 {
+  background-color: #007cd6 !important;
+  border-color: #007cd6 !important;
+}
+.info--text.text--darken-1 {
+  color: #007cd6 !important;
+  caret-color: #007cd6 !important;
+}
+.info.darken-2 {
+  background-color: #0064ba !important;
+  border-color: #0064ba !important;
+}
+.info--text.text--darken-2 {
+  color: #0064ba !important;
+  caret-color: #0064ba !important;
+}
+.info.darken-3 {
+  background-color: #004d9f !important;
+  border-color: #004d9f !important;
+}
+.info--text.text--darken-3 {
+  color: #004d9f !important;
+  caret-color: #004d9f !important;
+}
+.info.darken-4 {
+  background-color: #003784 !important;
+  border-color: #003784 !important;
+}
+.info--text.text--darken-4 {
+  color: #003784 !important;
+  caret-color: #003784 !important;
+}
+.success {
+  background-color: #4caf50 !important;
+  border-color: #4caf50 !important;
+}
+.success--text {
+  color: #4caf50 !important;
+  caret-color: #4caf50 !important;
+}
+.success.lighten-5 {
+  background-color: #dcffd6 !important;
+  border-color: #dcffd6 !important;
+}
+.success--text.text--lighten-5 {
+  color: #dcffd6 !important;
+  caret-color: #dcffd6 !important;
+}
+.success.lighten-4 {
+  background-color: #beffba !important;
+  border-color: #beffba !important;
+}
+.success--text.text--lighten-4 {
+  color: #beffba !important;
+  caret-color: #beffba !important;
+}
+.success.lighten-3 {
+  background-color: #a2ff9e !important;
+  border-color: #a2ff9e !important;
+}
+.success--text.text--lighten-3 {
+  color: #a2ff9e !important;
+  caret-color: #a2ff9e !important;
+}
+.success.lighten-2 {
+  background-color: #85e783 !important;
+  border-color: #85e783 !important;
+}
+.success--text.text--lighten-2 {
+  color: #85e783 !important;
+  caret-color: #85e783 !important;
+}
+.success.lighten-1 {
+  background-color: #69cb69 !important;
+  border-color: #69cb69 !important;
+}
+.success--text.text--lighten-1 {
+  color: #69cb69 !important;
+  caret-color: #69cb69 !important;
+}
+.success.darken-1 {
+  background-color: #2d9437 !important;
+  border-color: #2d9437 !important;
+}
+.success--text.text--darken-1 {
+  color: #2d9437 !important;
+  caret-color: #2d9437 !important;
+}
+.success.darken-2 {
+  background-color: #00791e !important;
+  border-color: #00791e !important;
+}
+.success--text.text--darken-2 {
+  color: #00791e !important;
+  caret-color: #00791e !important;
+}
+.success.darken-3 {
+  background-color: #006000 !important;
+  border-color: #006000 !important;
+}
+.success--text.text--darken-3 {
+  color: #006000 !important;
+  caret-color: #006000 !important;
+}
+.success.darken-4 {
+  background-color: #004700 !important;
+  border-color: #004700 !important;
+}
+.success--text.text--darken-4 {
+  color: #004700 !important;
+  caret-color: #004700 !important;
+}
+.warning {
+  background-color: #fb8c00 !important;
+  border-color: #fb8c00 !important;
+}
+.warning--text {
+  color: #fb8c00 !important;
+  caret-color: #fb8c00 !important;
+}
+.warning.lighten-5 {
+  background-color: #ffff9e !important;
+  border-color: #ffff9e !important;
+}
+.warning--text.text--lighten-5 {
+  color: #ffff9e !important;
+  caret-color: #ffff9e !important;
+}
+.warning.lighten-4 {
+  background-color: #fffb82 !important;
+  border-color: #fffb82 !important;
+}
+.warning--text.text--lighten-4 {
+  color: #fffb82 !important;
+  caret-color: #fffb82 !important;
+}
+.warning.lighten-3 {
+  background-color: #ffdf67 !important;
+  border-color: #ffdf67 !important;
+}
+.warning--text.text--lighten-3 {
+  color: #ffdf67 !important;
+  caret-color: #ffdf67 !important;
+}
+.warning.lighten-2 {
+  background-color: #ffc24b !important;
+  border-color: #ffc24b !important;
+}
+.warning--text.text--lighten-2 {
+  color: #ffc24b !important;
+  caret-color: #ffc24b !important;
+}
+.warning.lighten-1 {
+  background-color: #ffa72d !important;
+  border-color: #ffa72d !important;
+}
+.warning--text.text--lighten-1 {
+  color: #ffa72d !important;
+  caret-color: #ffa72d !important;
+}
+.warning.darken-1 {
+  background-color: #db7200 !important;
+  border-color: #db7200 !important;
+}
+.warning--text.text--darken-1 {
+  color: #db7200 !important;
+  caret-color: #db7200 !important;
+}
+.warning.darken-2 {
+  background-color: #bb5900 !important;
+  border-color: #bb5900 !important;
+}
+.warning--text.text--darken-2 {
+  color: #bb5900 !important;
+  caret-color: #bb5900 !important;
+}
+.warning.darken-3 {
+  background-color: #9d4000 !important;
+  border-color: #9d4000 !important;
+}
+.warning--text.text--darken-3 {
+  color: #9d4000 !important;
+  caret-color: #9d4000 !important;
+}
+.warning.darken-4 {
+  background-color: #802700 !important;
+  border-color: #802700 !important;
+}
+.warning--text.text--darken-4 {
+  color: #802700 !important;
+  caret-color: #802700 !important;
+}</style><script data-vue-meta="1" data-vmid="jsonld" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CreativeWork","name":"MIDI Controller","description":"Belegen Sie anpassbare Keyboards, Pads und Fader für eine taktile MIDI-Performance und -Aufnahme.","image":"https://renetik.com/images/Projects/RenetikMusicApps/feature-midi-controller.webp","url":"https://renetik.com/de/services/projects/renetik-midi-controller/","datePublished":"2021-03","temporalCoverage":["2021-03/.."],"author":{"@id":"https://renetik.com/services/introduction/#person","@type":"Person","name":"René Doháň","url":"https://renetik.com/services/introduction/"},"about":[]},{"@type":"MobileApplication","@id":"https://renetik.com/services/projects/renetik-midi-controller/#app","name":"MIDI Controller","description":"Belegen Sie anpassbare Keyboards, Pads und Fader für eine taktile MIDI-Performance und -Aufnahme.","operatingSystem":"Android","applicationCategory":"MultimediaApplication","installUrl":"https://play.google.com/store/apps/details?id=com.renetik.instruments.midicontroller","sameAs":["https://play.google.com/store/apps/details?id=com.renetik.instruments.midicontroller"],"author":{"@id":"https://renetik.com/services/introduction/#person","@type":"Person","name":"René Doháň","url":"https://renetik.com/services/introduction/"},"screenshot":["https://renetik.com/images/Projects/RenetikMusicApps/feature-midi-controller.webp","https://renetik.com/images/Projects/RenetikMusicApps/play-store-midi-controller.webp","https://renetik.com/images/Projects/RenetikMusicApps/Apps/midicontroller/phone/1_en-US.webp","https://renetik.com/images/Projects/RenetikMusicApps/Apps/midicontroller/phone/2_en-US.webp","https://renetik.com/images/Projects/RenetikMusicApps/Apps/midicontroller/phone/3_en-US.webp","https://renetik.com/images/Projects/RenetikMusicApps/Apps/midicontroller/phone/4_en-US.webp"],"applicationSubCategory":"Music production","publisher":{"@id":"https://renetik.com/#organization","@type":"Organization","name":"Renetik","url":"https://renetik.com"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Renetik","item":"https://renetik.com/de/"},{"@type":"ListItem","position":2,"name":"Einführung","item":"https://renetik.com/de/services/introduction/"},{"@type":"ListItem","position":3,"name":"Projekte","item":"https://renetik.com/de/services/projects/"},{"@type":"ListItem","position":4,"name":"MIDI Controller","item":"https://renetik.com/de/services/projects/renetik-midi-controller/"}]}]}</script><style>*{transition:none!important;animation:none!important;scroll-behavior:auto!important}</style><link rel="preload" href="/js/locale-de.aff7ebe6.js" as="script"></head><body><div data-app="true" class="application theme--light" id="app" data-prerendered="adaptive-theme"><div tabindex="-1" data-v-51dfab06="" class="v-dialog__content" style="z-index: 0;"><div class="v-dialog v-dialog--fullscreen" style="display: none;"><div data-v-51dfab06="" class="layout cs-viewer fill-height role aria-modal aria-label"><div data-v-51dfab06="" class="cs-viewer__stage"><!----></div><button data-v-51dfab06="" type="button" class="cs-viewer__btn cs-viewer__btn--close v-btn v-btn--flat v-btn--floating theme--dark" aria-label="Bildbetrachter schließen" title="Bildbetrachter schließen"><div class="v-btn__content"><i data-v-51dfab06="" aria-hidden="true" class="v-icon material-icons theme--dark">close</i></div></button><button data-v-51dfab06="" type="button" class="cs-viewer__btn cs-viewer__btn--prev v-btn v-btn--flat v-btn--floating theme--dark" aria-label="Vorheriges Bild" title="Vorheriges Bild"><div class="v-btn__content"><i data-v-51dfab06="" aria-hidden="true" class="v-icon material-icons theme--dark">chevron_left</i></div></button><button data-v-51dfab06="" type="button" class="cs-viewer__btn cs-viewer__btn--next v-btn v-btn--flat v-btn--floating theme--dark" aria-label="Nächstes Bild" title="Nächstes Bild"><div class="v-btn__content"><i data-v-51dfab06="" aria-hidden="true" class="v-icon material-icons theme--dark">chevron_right</i></div></button><!----></div></div></div><div data-v-687d9da3="" class="v-menu__content theme--light " style="min-width: 0px; top: 12px; left: 12px; transform-origin: left top; z-index: 0; display: none;"><div data-v-687d9da3="" role="list" class="v-list language-menu v-list--dense theme--light"><div data-v-687d9da3="" role="listitem"><a class="v-list__tile v-list__tile--link theme--light"><div data-v-687d9da3="" class="v-list__tile__content"><div data-v-687d9da3="" class="v-list__tile__title"> English </div></div><div data-v-687d9da3="" class="v-list__tile__action"><!----></div></a></div><div data-v-687d9da3="" role="listitem"><a aria-current="true" class="v-list__tile v-list__tile--link theme--light"><div data-v-687d9da3="" class="v-list__tile__content"><div data-v-687d9da3="" class="v-list__tile__title language-menu__title--active"> Deutsch </div></div><div data-v-687d9da3="" class="v-list__tile__action"><i data-v-687d9da3="" aria-hidden="true" class="v-icon material-icons theme--light primary--text">check</i></div></a></div><div data-v-687d9da3="" role="listitem"><a class="v-list__tile v-list__tile--link theme--light"><div data-v-687d9da3="" class="v-list__tile__content"><div data-v-687d9da3="" class="v-list__tile__title"> Español </div></div><div data-v-687d9da3="" class="v-list__tile__action"><!----></div></a></div><div data-v-687d9da3="" role="listitem"><a class="v-list__tile v-list__tile--link theme--light"><div data-v-687d9da3="" class="v-list__tile__content"><div data-v-687d9da3="" class="v-list__tile__title"> Français </div></div><div data-v-687d9da3="" class="v-list__tile__action"><!----></div></a></div><div data-v-687d9da3="" role="listitem"><a class="v-list__tile v-list__tile--link theme--light"><div data-v-687d9da3="" class="v-list__tile__content"><div data-v-687d9da3="" class="v-list__tile__title"> Indonesia </div></div><div data-v-687d9da3="" class="v-list__tile__action"><!----></div></a></div><div data-v-687d9da3="" role="listitem"><a class="v-list__tile v-list__tile--link theme--light"><div data-v-687d9da3="" class="v-list__tile__content"><div data-v-687d9da3="" class="v-list__tile__title"> 日本語 </div></div><div data-v-687d9da3="" class="v-list__tile__action"><!----></div></a></div><div data-v-687d9da3="" role="listitem"><a class="v-list__tile v-list__tile--link theme--light"><div data-v-687d9da3="" class="v-list__tile__content"><div data-v-687d9da3="" class="v-list__tile__title"> 한국어 </div></div><div data-v-687d9da3="" class="v-list__tile__action"><!----></div></a></div><div data-v-687d9da3="" role="listitem"><a class="v-list__tile v-list__tile--link theme--light"><div data-v-687d9da3="" class="v-list__tile__content"><div data-v-687d9da3="" class="v-list__tile__title"> Português </div></div><div data-v-687d9da3="" class="v-list__tile__action"><!----></div></a></div><div data-v-687d9da3="" role="listitem"><a class="v-list__tile v-list__tile--link theme--light"><div data-v-687d9da3="" class="v-list__tile__content"><div data-v-687d9da3="" class="v-list__tile__title"> Slovenčina </div></div><div data-v-687d9da3="" class="v-list__tile__action"><!----></div></a></div><div data-v-687d9da3="" role="listitem"><a class="v-list__tile v-list__tile--link theme--light"><div data-v-687d9da3="" class="v-list__tile__content"><div data-v-687d9da3="" class="v-list__tile__title"> 简体中文 </div></div><div data-v-687d9da3="" class="v-list__tile__action"><!----></div></a></div></div></div><div data-v-687d9da3="" class="v-menu__content theme--light " style="min-width: 0px; top: 12px; left: 12px; transform-origin: left top; z-index: 0; display: none;"><div data-v-687d9da3="" role="list" class="v-list language-menu v-list--dense theme--light"><div data-v-687d9da3="" role="listitem"><a class="v-list__tile v-list__tile--link theme--light"><div data-v-687d9da3="" class="v-list__tile__content"><div data-v-687d9da3="" class="v-list__tile__title"> English </div></div><div data-v-687d9da3="" class="v-list__tile__action"><!----></div></a></div><div data-v-687d9da3="" role="listitem"><a aria-current="true" class="v-list__tile v-list__tile--link theme--light"><div data-v-687d9da3="" class="v-list__tile__content"><div data-v-687d9da3="" class="v-list__tile__title language-menu__title--active"> Deutsch </div></div><div data-v-687d9da3="" class="v-list__tile__action"><i data-v-687d9da3="" aria-hidden="true" class="v-icon material-icons theme--light primary--text">check</i></div></a></div><div data-v-687d9da3="" role="listitem"><a class="v-list__tile v-list__tile--link theme--light"><div data-v-687d9da3="" class="v-list__tile__content"><div data-v-687d9da3="" class="v-list__tile__title"> Español </div></div><div data-v-687d9da3="" class="v-list__tile__action"><!----></div></a></div><div data-v-687d9da3="" role="listitem"><a class="v-list__tile v-list__tile--link theme--light"><div data-v-687d9da3="" class="v-list__tile__content"><div data-v-687d9da3="" class="v-list__tile__title"> Français </div></div><div data-v-687d9da3="" class="v-list__tile__action"><!----></div></a></div><div data-v-687d9da3="" role="listitem"><a class="v-list__tile v-list__tile--link theme--light"><div data-v-687d9da3="" class="v-list__tile__content"><div data-v-687d9da3="" class="v-list__tile__title"> Indonesia </div></div><div data-v-687d9da3="" class="v-list__tile__action"><!----></div></a></div><div data-v-687d9da3="" role="listitem"><a class="v-list__tile v-list__tile--link theme--light"><div data-v-687d9da3="" class="v-list__tile__content"><div data-v-687d9da3="" class="v-list__tile__title"> 日本語 </div></div><div data-v-687d9da3="" class="v-list__tile__action"><!----></div></a></div><div data-v-687d9da3="" role="listitem"><a class="v-list__tile v-list__tile--link theme--light"><div data-v-687d9da3="" class="v-list__tile__content"><div data-v-687d9da3="" class="v-list__tile__title"> 한국어 </div></div><div data-v-687d9da3="" class="v-list__tile__action"><!----></div></a></div><div data-v-687d9da3="" role="listitem"><a class="v-list__tile v-list__tile--link theme--light"><div data-v-687d9da3="" class="v-list__tile__content"><div data-v-687d9da3="" class="v-list__tile__title"> Português </div></div><div data-v-687d9da3="" class="v-list__tile__action"><!----></div></a></div><div data-v-687d9da3="" role="listitem"><a class="v-list__tile v-list__tile--link theme--light"><div data-v-687d9da3="" class="v-list__tile__content"><div data-v-687d9da3="" class="v-list__tile__title"> Slovenčina </div></div><div data-v-687d9da3="" class="v-list__tile__action"><!----></div></a></div><div data-v-687d9da3="" role="listitem"><a class="v-list__tile v-list__tile--link theme--light"><div data-v-687d9da3="" class="v-list__tile__content"><div data-v-687d9da3="" class="v-list__tile__title"> 简体中文 </div></div><div data-v-687d9da3="" class="v-list__tile__action"><!----></div></a></div></div></div><div class="application--wrap"><main class="v-content" style="padding: 64px 0px 0px;"><div class="v-content__wrap"><div class="portal-layout"><div><aside data-v-2cc4afac="" class="hidden-md-and-up v-navigation-drawer v-navigation-drawer--close v-navigation-drawer--fixed v-navigation-drawer--temporary theme--light" aria-label="Navigationsmenü" id="portal-navigation" role="navigation" style="height: 100%; margin-top: 0px; transform: translateX(-300px); width: 300px;"><div data-v-2cc4afac="" class="layout column"><div data-v-2cc4afac="" class="flex"><nav data-v-2cc4afac="" class="v-toolbar elevation-0 v-toolbar--fixed theme--light" style="margin-top: 0px; padding-right: 0px; padding-left: 0px; transform: translateY(0px);"><div class="v-toolbar__content" style="height: 64px;"><div data-v-10511d88="" data-v-2cc4afac="" class="v-toolbar__items"><div data-v-10511d88="" class="v-toolbar__title toolbar-title align-self-center pl-3 ma-1"><a data-v-10511d88="" href="/de/" class="brand-link router-link-active"><div data-v-9df0f7ce="" data-v-10511d88="" class="brand-logo top-bar-brand"><span data-v-9df0f7ce="" aria-hidden="true" class="brand-logo__mark" style="mask-image: url(&quot;/images/brand/renetik-hex-frame.svg&quot;);"></span><span data-v-9df0f7ce="" class="brand-logo__title">Renetik</span></div></a></div></div><div data-v-2cc4afac="" class="spacer"></div><div data-v-2cc4afac="" class="v-toolbar__items"><button data-v-687d9da3="" type="button" class="language-picker-button v-btn v-btn--flat theme--light" aria-label="Sprache: Deutsch" title="Sprache"><div class="v-btn__content"><i data-v-687d9da3="" aria-hidden="true" class="v-icon v-icon--left material-icons theme--light">language</i><span data-v-687d9da3="">DE</span><i data-v-687d9da3="" aria-hidden="true" class="v-icon v-icon--right material-icons theme--light">arrow_drop_down</i></div></button><div data-v-687d9da3="" data-v-2cc4afac="" class="v-menu"></div></div></div></nav></div><div data-v-2cc4afac="" class="flex"><div data-v-48774b83="" data-v-2cc4afac="" role="list" class="v-list nav-list theme--light"><div data-v-459b50e3="" data-v-48774b83="" role="listitem" class="list-item"><a href="/de/services/introduction" class="v-list__tile v-list__tile--link theme--light"><div data-v-459b50e3="" class="v-list__tile__content"><div data-v-459b50e3="" class="v-list__tile__title">Einführung</div></div></a></div><div data-v-459b50e3="" data-v-48774b83="" role="listitem" class="list-item"><a href="/de/services/solutions" class="v-list__tile v-list__tile--link theme--light"><div data-v-459b50e3="" class="v-list__tile__content"><div data-v-459b50e3="" class="v-list__tile__title">Lösungen</div></div></a></div><div data-v-459b50e3="" data-v-48774b83="" role="listitem" class="list-item"><a href="/de/services/projects" aria-current="page" class="list-item--active v-list__tile--active v-list__tile v-list__tile--link theme--light"><div data-v-459b50e3="" class="v-list__tile__content"><div data-v-459b50e3="" class="v-list__tile__title">Projekte</div></div></a></div><div data-v-459b50e3="" data-v-48774b83="" role="listitem" class="list-item"><a href="/de/services/experience" class="v-list__tile v-list__tile--link theme--light"><div data-v-459b50e3="" class="v-list__tile__content"><div data-v-459b50e3="" class="v-list__tile__title">Erfahrung</div></div></a></div><div data-v-459b50e3="" data-v-48774b83="" role="listitem" class="list-item"><a href="/de/services/cv" class="v-list__tile v-list__tile--link theme--light"><div data-v-459b50e3="" class="v-list__tile__content"><div data-v-459b50e3="" class="v-list__tile__title">Lebenslauf</div></div></a></div><div data-v-459b50e3="" data-v-48774b83="" role="listitem" class="list-item"><a href="/de/services/contact" class="v-list__tile v-list__tile--link theme--light"><div data-v-459b50e3="" class="v-list__tile__content"><div data-v-459b50e3="" class="v-list__tile__title">Kontakt</div></div></a></div></div></div></div><div class="v-navigation-drawer__border"></div></aside><nav class="portal-toolbar v-toolbar elevation-0 v-toolbar--fixed theme--light" style="margin-top: 0px; padding-right: 0px; padding-left: 0px; transform: translateY(0px);"><div class="v-toolbar__content" style="height: 64px;"><div data-v-10511d88="" class="v-toolbar__items hidden-sm-and-down"><div data-v-10511d88="" class="v-toolbar__title toolbar-title align-self-center pl-3 ma-1"><a data-v-10511d88="" href="/de/" class="brand-link router-link-active"><div data-v-9df0f7ce="" data-v-10511d88="" class="brand-logo top-bar-brand"><span data-v-9df0f7ce="" aria-hidden="true" class="brand-logo__mark" style="mask-image: url(&quot;/images/brand/renetik-hex-frame.svg&quot;);"></span><span data-v-9df0f7ce="" class="brand-logo__title">Renetik</span></div></a></div></div><div class="hidden-md-and-up mobile-bar-start"><button type="button" class="v-toolbar__side-icon v-btn v-btn--icon theme--light" aria-expanded="false" aria-label="Navigationsmenü" aria-controls="portal-navigation"><div class="v-btn__content"><i aria-hidden="true" class="v-icon material-icons theme--light">menu</i></div></button><a href="/de/" class="brand-link mobile-brand router-link-active"><div data-v-9df0f7ce="" class="brand-logo top-bar-brand"><span data-v-9df0f7ce="" aria-hidden="true" class="brand-logo__mark" style="mask-image: url(&quot;/images/brand/renetik-hex-frame.svg&quot;);"></span><span data-v-9df0f7ce="" class="brand-logo__title">Renetik</span></div></a></div><div class="v-toolbar__title hidden-md-and-up mobile-toolbar-title">Fallstudie</div><div class="spacer hidden-sm-and-down"></div><div class="v-toolbar__items hidden-sm-and-down nav-items"><a href="/de/services/introduction" class="nav-link"> Einführung </a><a href="/de/services/solutions" class="nav-link"> Lösungen </a><a href="/de/services/projects" class="nav-link router-link-active"> Projekte </a><a href="/de/services/experience" class="nav-link"> Erfahrung </a><a href="/de/services/cv" class="nav-link"> Lebenslauf </a><a href="/de/services/contact" class="nav-link"> Kontakt </a></div><div class="spacer"></div><div class="v-toolbar__items hidden-md-and-up nav-items mobile-next-page"><a href="/de/services/projects/renetik-music-apps" class="nav-link"> Renetik Music Apps <i aria-hidden="true" class="v-icon v-icon--right material-icons theme--light" style="font-size: 16px;">chevron_right</i></a></div><div class="v-toolbar__items hidden-sm-and-down"><button data-v-687d9da3="" type="button" class="language-picker-button v-btn v-btn--flat theme--light" aria-label="Sprache: Deutsch" title="Sprache"><div class="v-btn__content"><i data-v-687d9da3="" aria-hidden="true" class="v-icon v-icon--left material-icons theme--light">language</i><span data-v-687d9da3="">DE</span><i data-v-687d9da3="" aria-hidden="true" class="v-icon v-icon--right material-icons theme--light">arrow_drop_down</i></div></button><div data-v-687d9da3="" class="v-menu"></div></div></div></nav></div><div data-v-59741c0a="" class="container site-page site-page--readable portal-page"><div data-v-59741c0a="" class="site-card site-card--edge-media project-detail v-card v-card--flat v-sheet theme--light"><div data-v-2d8e6e4a="" data-v-59741c0a="" class="cs-image is-loaded" style="width: 100%; height: 320px;"><!----><img data-v-2d8e6e4a="" alt="MIDI Controller-Feature-Grafik mit der Android-Oberfläche." src="/images/Projects/RenetikMusicApps/feature-midi-controller.webp" loading="eager" fetchpriority="high" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;"></div><div data-v-59741c0a="" class="v-card__title site-card__header"><div data-v-59741c0a=""><h1 data-v-59741c0a="" class="site-page-title">MIDI Controller</h1><div data-v-59741c0a="" class="site-page-summary">Belegen Sie anpassbare Keyboards, Pads und Fader für eine taktile MIDI-Performance und -Aufnahme.</div></div></div><div data-v-59741c0a="" class="v-card__actions project-primary-actions site-actions"><a data-v-59741c0a="" href="https://renetik.com/app/midicontroller/" target="_blank" class="v-btn theme--light primary site-action site-action--primary" aria-label="Benutzerhandbuch" rel="noopener noreferrer"><div class="v-btn__content"><i data-v-59741c0a="" aria-hidden="true" class="v-icon v-icon--left fa fa-globe theme--light"></i> Benutzerhandbuch <i data-v-59741c0a="" aria-hidden="true" class="v-icon v-icon--right material-icons theme--light" style="font-size: 16px;">open_in_new</i></div></a><a data-v-59741c0a="" href="https://play.google.com/store/apps/details?id=com.renetik.instruments.midicontroller" target="_blank" class="v-btn v-btn--outline v-btn--depressed theme--light primary--text site-action site-action--secondary" aria-label="Kostenlose App" rel="noopener noreferrer"><div class="v-btn__content"><i data-v-59741c0a="" aria-hidden="true" class="v-icon v-icon--left  fab fa-google-play theme--light"></i> Kostenlose App <i data-v-59741c0a="" aria-hidden="true" class="v-icon v-icon--right material-icons theme--light" style="font-size: 16px;">open_in_new</i></div></a><a data-v-59741c0a="" href="https://play.google.com/store/apps/details?id=com.renetik.instruments.midicontroller.full_2_9" target="_blank" class="v-btn v-btn--outline v-btn--depressed theme--light primary--text site-action site-action--secondary" aria-label="Vollversion der App" rel="noopener noreferrer"><div class="v-btn__content"><i data-v-59741c0a="" aria-hidden="true" class="v-icon v-icon--left  fab fa-google-play theme--light"></i> Vollversion der App <i data-v-59741c0a="" aria-hidden="true" class="v-icon v-icon--right material-icons theme--light" style="font-size: 16px;">open_in_new</i></div></a></div><hr data-v-59741c0a="" class="v-divider theme--light"><div data-v-59741c0a="" class="v-card__text site-card__body"><div data-v-59741c0a="" class="layout row wrap"><div data-v-59741c0a="" class="flex md4 sm6 xs12"><div data-v-59741c0a="" class="site-meta">Kunde</div><div data-v-59741c0a="" class="site-body">Renetik — unabhängiges Produkt</div></div><div data-v-59741c0a="" class="flex md4 sm6 xs12"><div data-v-59741c0a="" class="site-meta">Rolle</div><div data-v-59741c0a="" class="site-body">Produktdesigner, UX/UI-Designer, Android- und Audio-Entwickler</div></div><div data-v-59741c0a="" class="flex md4 sm6 xs12"><div data-v-59741c0a="" class="site-meta">Zeitraum</div><div data-v-59741c0a="" class="site-body">März 2021 – Heute</div></div></div><div data-v-59741c0a="" class="mt-3"><span data-v-59741c0a="" tabindex="0" class="v-chip v-chip--small theme--light"><span class="v-chip__content">Kotlin</span></span><span data-v-59741c0a="" tabindex="0" class="v-chip v-chip--small theme--light"><span class="v-chip__content">C++</span></span><span data-v-59741c0a="" tabindex="0" class="v-chip v-chip--small theme--light"><span class="v-chip__content">Android SDK/NDK</span></span><span data-v-59741c0a="" tabindex="0" class="v-chip v-chip--small theme--light"><span class="v-chip__content">JNI</span></span><span data-v-59741c0a="" tabindex="0" class="v-chip v-chip--small theme--light"><span class="v-chip__content">CMake</span></span><span data-v-59741c0a="" tabindex="0" class="v-chip v-chip--small theme--light"><span class="v-chip__content">Firebase</span></span></div><div data-v-59741c0a="" class="mt-2"></div></div><!----><hr data-v-59741c0a="" class="v-divider theme--light"><div data-v-59741c0a="" class="v-card__text site-card__body"><section data-v-59741c0a="" class="detail-section"><p data-v-59741c0a="" class="site-body"> MIDI Controller verwandelt ein Android-Gerät in eine konfigurierbare Performance-Oberfläche zur Steuerung von Instrumenten, Anwendungen und Parametern über Keyboards, Pads und Fader. </p><p data-v-59741c0a="" class="site-body"> Verbinden Sie das Gerät über Kabel, Bluetooth oder andere Apps und kombinieren Sie das Performance-Layout mit MIDI-Synchronisation, Themes, Übersetzungen, Datensicherung und Audio-Performance-Konfiguration. </p><p data-v-59741c0a="" class="site-body"> Ich habe MIDI Controller von Anfang bis Ende entworfen: das Produktkonzept, den Musik-Workflow, die Informationsarchitektur, das Interaktionsmodell und die visuelle Benutzeroberfläche. Anschließend habe ich die Android-Erfahrung implementiert und sie durch Tests, Veröffentlichung, Iteration und Support begleitet. </p><p data-v-59741c0a="" class="site-body"> MIDI Controller ist Teil der Renetik Music Apps-Familie und nutzt deren Kotlin-Anwendungsfundament, die native C++-Audio-Engine, Firebase-Dienste, automatisierte Tests und den Release-Workflow. </p></section><!----><!----><!----><!----><section data-v-59741c0a="" class="detail-section"><h2 data-v-59741c0a="" class="site-section-title">Highlights</h2><div data-v-59741c0a="" class="layout row wrap"><div data-v-59741c0a="" class="flex md4 sm6 xs12"><div data-v-59741c0a="" class="highlight site-accent-left v-card v-card--flat v-sheet theme--light"><div data-v-59741c0a="" class="v-card__text site-body">Unabhängiges Produktdesign und -engineering vom Konzept bis zur Google Play-Veröffentlichung.</div></div></div><div data-v-59741c0a="" class="flex md4 sm6 xs12"><div data-v-59741c0a="" class="highlight site-accent-left v-card v-card--flat v-sheet theme--light"><div data-v-59741c0a="" class="v-card__text site-body">Konfigurierbare Keyboards, Pads und Fader.</div></div></div><div data-v-59741c0a="" class="flex md4 sm6 xs12"><div data-v-59741c0a="" class="highlight site-accent-left v-card v-card--flat v-sheet theme--light"><div data-v-59741c0a="" class="v-card__text site-body">MIDI-Verbindungen über Kabel, Bluetooth oder andere Apps.</div></div></div><div data-v-59741c0a="" class="flex md4 sm6 xs12"><div data-v-59741c0a="" class="highlight site-accent-left v-card v-card--flat v-sheet theme--light"><div data-v-59741c0a="" class="v-card__text site-body">Performance-Layouts zum Spielen, Steuern und Aufnehmen.</div></div></div><div data-v-59741c0a="" class="flex md4 sm6 xs12"><div data-v-59741c0a="" class="highlight site-accent-left v-card v-card--flat v-sheet theme--light"><div data-v-59741c0a="" class="v-card__text site-body">MIDI-Steuerungs- und Synchronisations-Workflows.</div></div></div><div data-v-59741c0a="" class="flex md4 sm6 xs12"><div data-v-59741c0a="" class="highlight site-accent-left v-card v-card--flat v-sheet theme--light"><div data-v-59741c0a="" class="v-card__text site-body">Mehrere visuelle Themes und übersetzte Benutzeroberfläche.</div></div></div><div data-v-59741c0a="" class="flex md4 sm6 xs12"><div data-v-59741c0a="" class="highlight site-accent-left v-card v-card--flat v-sheet theme--light"><div data-v-59741c0a="" class="v-card__text site-body">Anwendungsdaten-Import, -Export und Performance-Einstellungen.</div></div></div></div></section></div><!----><hr data-v-59741c0a="" class="v-divider theme--light"><div data-v-0812cc0c="" data-v-59741c0a=""><div data-v-0812cc0c="" class="container fluid grid-list-md"><div data-v-0812cc0c="" class="gallery-grid gallery-grid--landscape"><div data-v-0812cc0c="" class="site-card site-card--interactive gallery-card v-card v-card--flat v-sheet theme--light" aria-label="MIDI Controller-Feature-Grafik mit der Android-Oberfläche." role="button" tabindex="0" style="width: 100%; --gallery-image-ratio: 1024 / 512;"><div data-v-2d8e6e4a="" data-v-0812cc0c="" class="cs-image is-loaded" style="width: 100%; height: 100%;"><!----><img data-v-2d8e6e4a="" alt="MIDI Controller-Feature-Grafik mit der Android-Oberfläche." src="/images/Projects/RenetikMusicApps/feature-midi-controller.webp" loading="eager" fetchpriority="auto" decoding="async" style="width: 100%; height: 100%; object-fit: contain; object-position: center center;"></div></div><div data-v-0812cc0c="" class="site-card site-card--interactive gallery-card v-card v-card--flat v-sheet theme--light" aria-label="Werbe-Screenshot von MIDI Controller bei Google Play." role="button" tabindex="0" style="width: 100%; --gallery-image-ratio: 1600 / 724;"><div data-v-2d8e6e4a="" data-v-0812cc0c="" class="cs-image is-loaded" style="width: 100%; height: 100%;"><!----><img data-v-2d8e6e4a="" alt="Werbe-Screenshot von MIDI Controller bei Google Play." src="/images/Projects/RenetikMusicApps/play-store-midi-controller.webp" loading="eager" fetchpriority="auto" decoding="async" style="width: 100%; height: 100%; object-fit: contain; object-position: center center;"></div></div><div data-v-0812cc0c="" class="site-card site-card--interactive gallery-card v-card v-card--flat v-sheet theme--light" aria-label="Android-Produktscreenshot 1 des MIDI Controller." role="button" tabindex="0" style="width: 100%; --gallery-image-ratio: 2388 / 1080;"><div data-v-2d8e6e4a="" data-v-0812cc0c="" class="cs-image is-loaded" style="width: 100%; height: 100%;"><!----><img data-v-2d8e6e4a="" alt="Android-Produktscreenshot 1 des MIDI Controller." src="/images/Projects/RenetikMusicApps/Apps/midicontroller/phone/1_en-US.webp" loading="eager" fetchpriority="auto" decoding="async" style="width: 100%; height: 100%; object-fit: contain; object-position: center center;"></div></div><div data-v-0812cc0c="" class="site-card site-card--interactive gallery-card v-card v-card--flat v-sheet theme--light" aria-label="Android-Produktscreenshot 2 des MIDI Controller." role="button" tabindex="0" style="width: 100%; --gallery-image-ratio: 2388 / 1080;"><div data-v-2d8e6e4a="" data-v-0812cc0c="" class="cs-image is-loaded" style="width: 100%; height: 100%;"><!----><img data-v-2d8e6e4a="" alt="Android-Produktscreenshot 2 des MIDI Controller." src="/images/Projects/RenetikMusicApps/Apps/midicontroller/phone/2_en-US.webp" loading="eager" fetchpriority="auto" decoding="async" style="width: 100%; height: 100%; object-fit: contain; object-position: center center;"></div></div><div data-v-0812cc0c="" class="site-card site-card--interactive gallery-card v-card v-card--flat v-sheet theme--light" aria-label="Android-Produktscreenshot 3 des MIDI Controller." role="button" tabindex="0" style="width: 100%; --gallery-image-ratio: 2388 / 1080;"><div data-v-2d8e6e4a="" data-v-0812cc0c="" class="cs-image is-loaded" style="width: 100%; height: 100%;"><!----><img data-v-2d8e6e4a="" alt="Android-Produktscreenshot 3 des MIDI Controller." src="/images/Projects/RenetikMusicApps/Apps/midicontroller/phone/3_en-US.webp" loading="eager" fetchpriority="auto" decoding="async" style="width: 100%; height: 100%; object-fit: contain; object-position: center center;"></div></div><div data-v-0812cc0c="" class="site-card site-card--interactive gallery-card v-card v-card--flat v-sheet theme--light" aria-label="Android-Produktscreenshot 4 des MIDI Controller." role="button" tabindex="0" style="width: 100%; --gallery-image-ratio: 2388 / 1080;"><div data-v-2d8e6e4a="" data-v-0812cc0c="" class="cs-image is-loaded" style="width: 100%; height: 100%;"><!----><img data-v-2d8e6e4a="" alt="Android-Produktscreenshot 4 des MIDI Controller." src="/images/Projects/RenetikMusicApps/Apps/midicontroller/phone/4_en-US.webp" loading="eager" fetchpriority="auto" decoding="async" style="width: 100%; height: 100%; object-fit: contain; object-position: center center;"></div></div><div data-v-0812cc0c="" class="site-card site-card--interactive gallery-card v-card v-card--flat v-sheet theme--light" aria-label="Android-Produktscreenshot 5 des MIDI Controller." role="button" tabindex="0" style="width: 100%; --gallery-image-ratio: 2388 / 1080;"><div data-v-2d8e6e4a="" data-v-0812cc0c="" class="cs-image is-loaded" style="width: 100%; height: 100%;"><!----><img data-v-2d8e6e4a="" alt="Android-Produktscreenshot 5 des MIDI Controller." src="/images/Projects/RenetikMusicApps/Apps/midicontroller/phone/5_en-US.webp" loading="eager" fetchpriority="auto" decoding="async" style="width: 100%; height: 100%; object-fit: contain; object-position: center center;"></div></div><div data-v-0812cc0c="" class="site-card site-card--interactive gallery-card v-card v-card--flat v-sheet theme--light" aria-label="Android-Produktscreenshot 6 des MIDI Controller." role="button" tabindex="0" style="width: 100%; --gallery-image-ratio: 2388 / 1080;"><div data-v-2d8e6e4a="" data-v-0812cc0c="" class="cs-image is-loaded" style="width: 100%; height: 100%;"><!----><img data-v-2d8e6e4a="" alt="Android-Produktscreenshot 6 des MIDI Controller." src="/images/Projects/RenetikMusicApps/Apps/midicontroller/phone/6_en-US.webp" loading="eager" fetchpriority="auto" decoding="async" style="width: 100%; height: 100%; object-fit: contain; object-position: center center;"></div></div><div data-v-0812cc0c="" class="site-card site-card--interactive gallery-card v-card v-card--flat v-sheet theme--light" aria-label="Android-Produktscreenshot 7 des MIDI Controller." role="button" tabindex="0" style="width: 100%; --gallery-image-ratio: 2388 / 1080;"><div data-v-2d8e6e4a="" data-v-0812cc0c="" class="cs-image is-loaded" style="width: 100%; height: 100%;"><!----><img data-v-2d8e6e4a="" alt="Android-Produktscreenshot 7 des MIDI Controller." src="/images/Projects/RenetikMusicApps/Apps/midicontroller/phone/7_en-US.webp" loading="eager" fetchpriority="auto" decoding="async" style="width: 100%; height: 100%; object-fit: contain; object-position: center center;"></div></div><div data-v-0812cc0c="" class="site-card site-card--interactive gallery-card v-card v-card--flat v-sheet theme--light" aria-label="Android-Produktscreenshot 8 des MIDI Controller." role="button" tabindex="0" style="width: 100%; --gallery-image-ratio: 2388 / 1080;"><div data-v-2d8e6e4a="" data-v-0812cc0c="" class="cs-image is-loaded" style="width: 100%; height: 100%;"><!----><img data-v-2d8e6e4a="" alt="Android-Produktscreenshot 8 des MIDI Controller." src="/images/Projects/RenetikMusicApps/Apps/midicontroller/phone/8_en-US.webp" loading="eager" fetchpriority="auto" decoding="async" style="width: 100%; height: 100%; object-fit: contain; object-position: center center;"></div></div></div><div data-v-0812cc0c="" class="gallery-grid gallery-grid--portrait"><div data-v-0812cc0c="" class="site-card site-card--interactive gallery-card v-card v-card--flat v-sheet theme--light" aria-label="Kundenbewertung 1 für MIDI Controller." role="button" tabindex="0" style="width: 100%; --gallery-image-ratio: 1080 / 1107;"><div data-v-2d8e6e4a="" data-v-0812cc0c="" class="cs-image is-loaded" style="width: 100%; height: 100%;"><!----><img data-v-2d8e6e4a="" alt="Kundenbewertung 1 für MIDI Controller." src="/images/Projects/RenetikMusicApps/Apps/midicontroller/review/review_2.webp" loading="eager" fetchpriority="auto" decoding="async" style="width: 100%; height: 100%; object-fit: contain; object-position: center center;"></div></div><div data-v-0812cc0c="" class="site-card site-card--interactive gallery-card v-card v-card--flat v-sheet theme--light" aria-label="Kundenbewertung 2 für den MIDI Controller." role="button" tabindex="0" style="width: 100%; --gallery-image-ratio: 1080 / 1797;"><div data-v-2d8e6e4a="" data-v-0812cc0c="" class="cs-image is-loaded" style="width: 100%; height: 100%;"><!----><img data-v-2d8e6e4a="" alt="Kundenbewertung 2 für den MIDI Controller." src="/images/Projects/RenetikMusicApps/Apps/midicontroller/review/review_1.webp" loading="eager" fetchpriority="auto" decoding="async" style="width: 100%; height: 100%; object-fit: contain; object-position: center center;"></div></div></div></div><div data-v-51dfab06="" data-v-0812cc0c="" class="v-dialog__container" style="display: block;"></div></div></div></div><footer data-v-72c77d2d="" class="v-footer theme--light" xs12="" style="height: auto;"><div data-v-72c77d2d="" class="transparent lighten-1 text-xs-center v-card v-card--flat v-sheet v-sheet--tile theme--light" style="width: 100%;"><div data-v-72c77d2d="" class="v-card__text footer-links"><a data-v-72c77d2d="" href="/de/faq/" class="footer-link">FAQ</a><a data-v-72c77d2d="" href="/privacy-policy.html" class="footer-link">Datenschutzerklärung</a><a data-v-72c77d2d="" href="/cookie-policy.html" class="footer-link">Cookie-Richtlinie</a><a data-v-72c77d2d="" href="#cookie-settings" class="footer-link">Cookies verwalten</a></div><div data-v-72c77d2d="" class="v-card__text"> © 2019–2026 <strong data-v-72c77d2d="">René Doháň</strong></div></div></footer></div></div></main></div></div><div id="rd-cookie-banner" class="rd-cookie-banner rd-cookie-banner--hidden" role="region" aria-label="Cookie consent"><p class="rd-cookie-message"><span data-consent="message">We use analytics cookies to understand how this site is used. They are set only if you accept.</span> <a data-consent="policy" href="/cookie-policy.html">Cookie Policy</a></p><div class="rd-cookie-actions"><button type="button" data-consent="accept">Accept</button> <button type="button" data-consent="reject">Reject</button></div></div><div id="VwldYaeU6" role="status" aria-live="polite" aria-atomic="false"></div></body></html>
