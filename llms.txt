@@ -1,0 +1,19 @@
+# René Doháň — Senior Software Engineer & Product Lead
+
+> Renetik is the brand of René Doháň, a self-employed software developer registered in Slovakia (EU). Renetik covers his client engineering services, his released software, and his open-source libraries. Renetik Music Apps is his line of ten independent Android music-production apps.
+
+## Services Pages
+- [Renetik gateway](https://renetik.com/): Choose René Doháň’s software services or Renetik Music Apps.
+- [Introduction](https://renetik.com/services/introduction/): senior engineering, product management, AI-agent workflow, and remote-work profile.
+- [Solutions](https://renetik.com/services/solutions/): native mobile, full-stack, SDK, audio, modernization, product, and delivery expertise.
+- [Projects](https://renetik.com/services/projects/): 41 selected software projects and case studies.
+- [Experience](https://renetik.com/services/experience/): complete 20+ year software and product-delivery timeline.
+- [CV](https://renetik.com/services/cv/): focused CV for senior remote engineering, product, and delivery roles.
+- [Contact](https://renetik.com/services/contact/): availability, direct contact details, and professional profiles.
+- [FAQ](https://renetik.com/faq/): portal-wide FAQ covering Renetik services and Music Apps.
+
+## Renetik Music Apps
+- [Renetik Music Apps](https://renetik.com/app/): Android music production tools and documentation.
+- [Music Apps machine-readable guide](https://renetik.com/app/llms.txt): Android music production tools and documentation.
+
+> Complete guide and other languages: https://renetik.com/llms-full.txt
