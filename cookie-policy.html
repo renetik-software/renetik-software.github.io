@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Cookie Policy | René Doháň</title>
+  <meta name="description" content="Cookie and browser storage information for renetik.com, including how to give and withdraw consent.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: Inter, Arial, sans-serif;
+      line-height: 1.6;
+    }
+    body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+    h1, h2 {
+      line-height: 1.25;
+    }
+    h2 {
+      margin-top: 2rem;
+    }
+    a {
+      color: #0b63ce;
+    }
+    .meta {
+      color: #666;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem 0.6rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f2f2f2;
+    }
+    code {
+      font-family: SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.9em;
+    }
+    button {
+      font: inherit;
+      padding: 0.5rem 1rem;
+      border: 1px solid #0b63ce;
+      background: #0b63ce;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover,
+    button:focus {
+      background: #094ba0;
+      border-color: #094ba0;
+    }
+    .confirm {
+      font-weight: 600;
+    }
+    @media (prefers-color-scheme: dark) {
+      a {
+        color: #7ab8ff;
+      }
+      .meta {
+        color: #bbb;
+      }
+      th {
+        background: #26282c;
+      }
+      th, td {
+        border-color: #444;
+      }
+      button {
+        background: #1a4fa0;
+        border-color: #1a4fa0;
+      }
+      button:hover,
+      button:focus {
+        background: #094ba0;
+        border-color: #094ba0;
+      }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Cookie Policy</h1>
+  <p class="meta">Last updated: 7 August 2026</p>
+
+  <p>
+    This policy explains how renetik.com uses cookies and browser storage, and how you control it.
+    It applies together with the <a href="/privacy-policy.html">Privacy Policy</a>.
+  </p>
+
+  <h2>Controller and contact</h2>
+  <p>
+    René Doháň is responsible for the site's data processing. For cookie or privacy questions,
+    email <a href="mailto:dohan.rene@gmail.com">dohan.rene@gmail.com</a>.
+  </p>
+
+  <h2>Scope</h2>
+  <p>
+    This policy covers all of renetik.com, including the Music Apps pages under <code>/app/</code>.
+    They share one origin, so a single consent choice applies across both.
+  </p>
+
+  <h2>Consent</h2>
+  <p>
+    renetik.com separates storage into two categories:
+  </p>
+  <ul>
+    <li>
+      <strong>Essential</strong> storage works without any consent and is needed for the site to
+      function. It is set the first time you visit.
+    </li>
+    <li>
+      <strong>Analytics</strong> cookies are non-essential. They are set <strong>only after you
+      consent</strong> through the banner, and consent can be withdrawn at any time.
+    </li>
+  </ul>
+  <p>
+    When you first visit, a banner asks whether you accept analytics cookies. Choosing
+    <strong>Reject</strong> means no analytics cookies are set. Your choice is remembered for up to
+    12 months and applies to both <code>/</code> and <code>/app/</code>.
+  </p>
+
+  <h2>Cookie and storage table</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Purpose</th>
+        <th>Provider</th>
+        <th>Retention</th>
+        <th>Category</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>locale</code></td>
+        <td>localStorage</td>
+        <td>Remembers the chosen display language</td>
+        <td>First-party (renetik.com)</td>
+        <td>Until cleared</td>
+        <td>Essential</td>
+      </tr>
+      <tr>
+        <td><code>servicesRedirect</code></td>
+        <td>sessionStorage</td>
+        <td>Recovers the intended URL after a static-host redirect</td>
+        <td>First-party</td>
+        <td>Session</td>
+        <td>Essential</td>
+      </tr>
+      <tr>
+        <td><code>cookieConsent</code></td>
+        <td>localStorage</td>
+        <td>Records the consent choice and when it was made</td>
+        <td>First-party</td>
+        <td>12 months</td>
+        <td>Essential</td>
+      </tr>
+      <tr>
+        <td><code>_ga</code></td>
+        <td>Cookie</td>
+        <td>Distinguishes visitors (GA4)</td>
+        <td>Google Analytics, set first-party</td>
+        <td>2 years</td>
+        <td>Analytics — only after consent</td>
+      </tr>
+      <tr>
+        <td><code>_ga_&lt;container&gt;</code></td>
+        <td>Cookie</td>
+        <td>Maintains session state per GA4 stream</td>
+        <td>Google Analytics, set first-party</td>
+        <td>2 years</td>
+        <td>Analytics — only after consent</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Withdrawing consent</h2>
+  <p>
+    You can withdraw your analytics consent at any time. Withdrawing stops analytics cookies from
+    being set on later visits and is as easy as giving consent.
+  </p>
+  <p>
+    <button id="rd-withdraw" type="button">Withdraw consent</button>
+    <span id="rd-withdraw-result" class="confirm" hidden></span>
+  </p>
+  <p>
+    You can also reopen the consent banner on any page from the
+    <a href="/services/introduction/#cookie-settings">footer “Manage cookies” link</a>.
+  </p>
+
+  <h2>External resources</h2>
+  <p>
+    The site loads fonts and icons from Google Fonts and Font Awesome, and project pages can embed
+    videos. Loading these resources shares ordinary request information — such as your IP address and
+    browser — with the relevant provider. YouTube embeds use the privacy-enhanced
+    <code>youtube-nocookie.com</code> domain.
+  </p>
+
+  <h2>Your rights</h2>
+  <p>
+    Depending on the law that applies to you, you have the right to access, correct, delete, restrict,
+    port, or object to the processing of your data; to withdraw consent without affecting earlier
+    lawful processing; and to complain to a supervisory authority. For renetik.com that authority is
+    the <strong>Úrad na ochranu osobných údajov SR (ÚOOÚ)</strong>,
+    <a href="https://uoou.gov.sk">https://uoou.gov.sk</a>. Email
+    <a href="mailto:dohan.rene@gmail.com">dohan.rene@gmail.com</a> to make a request.
+  </p>
+
+  <h2>Changes</h2>
+  <p>
+    This policy may be updated when the site's cookies or storage change. The date above identifies
+    the current version.
+  </p>
+
+  <p><a href="/services/introduction/">Return to Renetik</a></p>
+</main>
+
+<script>
+  (function () {
+    var button = document.getElementById('rd-withdraw')
+    var result = document.getElementById('rd-withdraw-result')
+    if (!button || !result) return
+    button.addEventListener('click', function () {
+      try {
+        window.localStorage.removeItem('cookieConsent')
+      } catch (_) {
+        // Storage blocked: treat as withdrawn regardless.
+      }
+      button.setAttribute('hidden', '')
+      result.textContent = 'Consent withdrawn. Analytics cookies will not be set on your next visit.'
+      result.removeAttribute('hidden')
+    })
+  })()
+</script>
+</body>
+</html>

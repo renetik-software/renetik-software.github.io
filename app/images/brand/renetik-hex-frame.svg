@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Renetik hexagonal frame logo</title>
+  <defs>
+    <clipPath id="hexClip"><polygon points="441.33,149 441.33,363 256,470 70.67,363 70.67,149 256,42"/></clipPath>
+  </defs>
+  <g clip-path="url(#hexClip)" fill="none" stroke="black" stroke-width="16" stroke-linecap="round">
+    <circle cx="256" cy="256" r="102"/>
+    <circle cx="358" cy="256" r="102"/>
+    <circle cx="307" cy="344.335" r="102"/>
+    <circle cx="205" cy="344.335" r="102"/>
+    <circle cx="154" cy="256" r="102"/>
+    <circle cx="205" cy="167.665" r="102"/>
+    <circle cx="307" cy="167.665" r="102"/>
+  </g>
+  <polygon points="441.33,149 441.33,363 256,470 70.67,363 70.67,149 256,42" fill="none" stroke="black" stroke-width="18" stroke-linejoin="round"/>
+</svg>

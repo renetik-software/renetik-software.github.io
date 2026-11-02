@@ -1,0 +1,9 @@
+.cv-actions .v-btn__content {
+  white-space: normal;
+  text-align: center;
+}
+
+.cv-actions .site-action {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
